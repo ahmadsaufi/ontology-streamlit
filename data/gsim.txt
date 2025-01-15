@@ -1,0 +1,1355 @@
+GSIM version 2.0
+Generic Statistical Information Model (Version 2.0)
+22 November 2024
+
+More details about this document
+Latest published version:
+https://www.w3.org/GSIMv2/
+Latest editor's draft:
+https://unece.github.io/GSIM-2.0/
+History:
+Commit history
+Feedback:
+GitHub UNECE/GSIM-2.0 (pull requests, new issue, open issues)
+This work is licensed under the Creative Commons Attribution 4.0 International License. If you re-use all or part of this work, please attribute it to the United Nations Economic Commission for Europe (UNECE), on behalf of the international statistical community.
+
+Abstract
+This is the GitHub repository for version 2.0 of the Generic Statistical Information Model (GSIM). You can use the sidebar to navigate different sections of this page.
+
+Need an Executive Summary of GSIM? - Please refer to our GSIM Communication Paper (aimed at senior managers).
+
+For a summary of changes to GSIM since version 1.2, please refer to this page refer to this page
+
+For information about previous versions of GSIM, you may consult the UNECE Statistics Wiki site
+
+Quick Links
+
+1. Base Group
+
+2. Business Group
+
+3. Concept Group
+
+4. Exchange Group
+
+5. Structure Group
+
+Table of Contents
+Abstract
+1.Base Group
+1.1Group Diagram
+1.2Descriptive Information
+1.2.1Administrative Details
+1.2.2Agent
+1.2.3Agent In Role
+1.2.4Change Event
+1.2.5Contact
+1.2.6Identifiable Artefact
+1.2.7Individual
+1.2.8Maintainer
+1.2.9Organisation
+1.2.10Owner
+1.2.11Role
+1.2.12Software Agent
+2.Business Group
+2.1Group Diagram
+2.2Descriptive Information
+2.2.1Assessment
+2.2.2Business Case
+2.2.3Business Function
+2.2.4Business Process
+2.2.5Business Service
+2.2.6Change Definition
+2.2.7Core Input
+2.2.8Core Output
+2.2.9Environment Change
+2.2.10Information Request
+2.2.11Parameter Input
+2.2.12Process Control
+2.2.13Process Control Design
+2.2.14Process Design
+2.2.15Process Execution Log
+2.2.16Process Input
+2.2.17Process Input Specification
+2.2.18Process Method
+2.2.19Process Metric
+2.2.20Process Output
+2.2.21Process Output Specification
+2.2.22Process Pattern
+2.2.23Process Step
+2.2.24Process Step Instance
+2.2.25Process Support Input
+2.2.26Reference Document
+2.2.27Rule
+2.2.28Statistical Need
+2.2.29Statistical Programme
+2.2.30Statistical Programme Cycle
+2.2.31Statistical Programme Design
+2.2.32Statistical Support Activity
+3.Concept Group
+3.1Group Diagram
+3.2Descriptive Information
+3.2.1Category
+3.2.2Category Item
+3.2.3Category Set
+3.2.4Classification Family
+3.2.5Classification Index
+3.2.6Classification Index Entry
+3.2.7Classification Item
+3.2.8Classification Series
+3.2.9Code
+3.2.10Code Item
+3.2.11Code List
+3.2.12Concept
+3.2.13Concept System
+3.2.14Conceptual Domain
+3.2.15Conceptual Variable
+3.2.16Correspondence Table
+3.2.17Datum
+3.2.18Described Conceptual Domain
+3.2.19Described Value Domain
+3.2.20Designation
+3.2.21Enumerated Conceptual Domain
+3.2.22Enumerated Value Domain
+3.2.23Instance Variable
+3.2.24Level
+3.2.25Map
+3.2.26Measurement Type
+3.2.27Measurement Unit
+3.2.28Node
+3.2.29Node Set
+3.2.30Population
+3.2.31Represented Variable
+3.2.32Sentinel Value Domain
+3.2.33Statistical Classification
+3.2.34Subject Field
+3.2.35Substantive Value Domain
+3.2.36Unit
+3.2.37Unit Type
+3.2.38Universe
+3.2.39Value Domain
+4.Exchange Group
+4.1Group Diagram
+4.2Descriptive Information
+4.2.1Data Harvest
+4.2.2Dissemination Instrument
+4.2.3Exchange Instrument
+4.2.4Exchange Specification
+4.2.5Information Consumer
+4.2.6Information Provider
+4.2.7Instance Question
+4.2.8Instance Question Block
+4.2.9Instance Statement
+4.2.10Output Specification
+4.2.11Presentation
+4.2.12Product
+4.2.13Provision Agreement
+4.2.14Question
+4.2.15Question Block
+4.2.16Questionnaire
+4.2.17Questionnaire Component
+4.2.18Questionnaire Logic
+4.2.19Questionnaire Specification
+4.2.20Register
+4.2.21Statement
+5.Structure Group
+5.1Group Diagram
+5.2Descriptive Information
+5.2.1Attribute Component
+5.2.2Data Point
+5.2.3Data Record
+5.2.4Data Resource
+5.2.5Data Set
+5.2.6Data Structure
+5.2.7Data Structure Component
+5.2.8Dimensional Data Structure
+5.2.9Identifier Component
+5.2.10Information Resource
+5.2.11Information Set
+5.2.12Information Structure
+5.2.13Logical Record
+5.2.14Measure Component
+5.2.15Record Relationship
+5.2.16Referential Metadata Attribute
+5.2.17Referential Metadata Content Item
+5.2.18Referential Metadata Resource
+5.2.19Referential Metadata Set
+5.2.20Referential Metadata Structure
+5.2.21Referential Metadata Subject
+5.2.22Referential Metadata Subject Item
+5.2.23Unit Data Structure
+A.Acknowledgements
+1. Base Group
+1.1 Group Diagram
+Click the diagram below and then select a class for an interactive step-through of the Base Group classes
+
+Alt text here
+1.2 Descriptive Information
+Base Group provides features that are reusable by other classes to support functionality such as identity and versioning.
+
+The information classes defined within this group as as follows:
+
+1.2.1 Administrative Details
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Administrative Details	Base	extensions to the model based on an organisations administrative needs	The Administrative Details is designed to act as a placeholder to allow for future extensions to the existing model. It allows for further information to be added about the Administrative Details required to maintain the other information classes outlined by GSIM.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Administrative Status	Indicator for access to an item: under review, open for use, or removed.	0..1	ControlledVocabulary
+Alias	The alias or alia associated with the information class.	0..*	String
+Annotation	A comment or instruction which provides additional explanations about the information class and how to use it.	0..*	String
+Created Date	The date on which the information class was created.	0..1	Date
+Documentation	An official document or paper that has been published by an organisation.	0..*	String
+Last Updated Date	The date on which the information class was last changed.	0..1	Date
+Life Cycle Status	Indicator for the quality of an item: incomplete, valid, superseded, or retired.	0..1	ControlledVocabulary
+Url	Allows location of the information class. Distinct from the identification of the class as handled by the identifier attribute in Identifiable Artefact.	0..*	String
+Valid From	The start date included in the period during which the class is effective or valid. It is effective or valid from that date.	0..1	Date
+Valid To	The end date included in the period during which the information class is effective or valid. It is no longer effective or valid after that date.	0..1	Date
+1.2.2 Agent
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Agent	Base	someone or something that plays an active role in the lifecycle of an Identifiable Artefact	An Agent may be an Individual, an Organisation (or part of it) or a Software Agent that affects in some way an instance of a GSIM class. For example, an Agent can play a role in the execution of a Business Processes or in the way a Statistical Classification (or a Concept) changes over time.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.3 Agent In Role
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Agent In Role	Base	an Agent acting in a specific Role	In the Organization Ontology from W3C Agent In Role is called a Post.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Description	The description of the information class.	0..1	MultilingualText
+Name	A term which designates a concept, in this case an information class. The identifying name will be the preferred designation. There will be many terms to designate the same information class, such as synonyms and terms in other languages.	1..1	MultilingualText
+1.2.4 Change Event
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Change Event	Base	indication of the occurrence of a change to an Identifiable Artefact	A Change Event relates to the information class(es) that has(have) been affected. It can be applied to only one Identifiable Artefact and result in one or more Identifiable Artefact(s). On the other hand, a Change Event can be applied to more than one Identifiable Artefact and result in only one Identifiable Artefact.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Change Date	The date on which the Change Event occurred.	1..1	Date
+Change Type	The type of change that occurred during the Change Event.	1..1	String
+Identifier	The unique identifier of the Change Event that is applied to an information class; assigned by the owner agency.	1..1	String
+1.2.5 Contact
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Contact	Base	Role in which Individual(s) is(are) responsible for providing additional information about an information class and/or its metadata, either directly or indirectly by linking to its source	 	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.6 Identifiable Artefact
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Identifiable Artefact	Base	abstract class that comprises the basic attributes and associations needed for identification, naming and other documentation	All GSIM classes except Administrative Details, Agent In Role, Change Event, Datum, Process Input (and its sub-types) and Process Output (and its sub-types) are a sub-type of Identifiable Artefact. In SDMX, Identifiable Artefact is defined as construct that contains structures capable of providing identity to an object.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Description	The description of the information class.	0..1	MultilingualText
+Id	The unique identifier of the information class; assigned by the owner agency.	1..1	String
+Local ID	This is an identifier in a given local context that uniquely references an information class. For example, Local ID could be a variable name in a dataset.	0..1	String
+Name	A term which designates a concept, in this case an information class. The identifying name will be the preferred designation. There will be many terms to designate the same information class, such as synonyms and terms in other languages.	1..1	MultilingualText
+Version	The version designator of the information class assigned by the owner agency.	0..1	String
+Version Date	The date on which the version was created.	0..1	Date
+Version Rationale	The reason for making this version of the information class.	0..1	String
+1.2.7 Individual
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Individual	Base	person who acts, or is designated to act towards a specific purpose	 	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.8 Maintainer
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Maintainer	Base	Role in which a unit or group of persons within the Organisation is responsible for managing an information class and its metadata	A unit or group of persons with the role of Maintainer is responsible for all administrative and operational issues relating to one or a set of information classes and its metadata (e.g. adding, modifying or deleting metadata about an information class). It is answerable to all stakeholders for all issues related to the information classes under its responsibility. A Maintainer is not a decision-making body. Decisions are made collaboratively among the owners of the artefact.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.9 Organisation
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Organisation	Base	unique framework of authority within which a person or persons act, or are designated to act, towards some purpose	Organisation represents a collection of people organised together, often with hierarchical structures. Examples of Organisation: national statistics office, international agency	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.10 Owner
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Owner	Base	Role in which a statistical office, authority or other organisation is responsible for defining, specifying, creating and making decisions about the maintenance of a class and/or its metadata	Some information classes may have several Owners.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.11 Role
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Role	Base	function assumed by an Agent	Part played by an Individual, an Organisation (or part of it) or a Software Agent in a particular situation. Examples: Contact, data steward, scheduler. Role can be maintained by a controlled vocabulary (e.g. RASCI).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+1.2.12 Software Agent
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Software Agent	Base	software that carries out Process Step based on Process Control	Examples: google bot	PROV Software Agent, DDI Machine
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2. Business Group
+2.1 Group Diagram
+Click the diagram below and then select a class for an interactive step-through of the Business Group classes
+
+Alt text here
+2.2 Descriptive Information
+Business Group is used to capture the designs and plans of statistical programmes, and the processes undertaken to deliver those programmes.
+
+The information classes defined within this group as as follows:
+
+2.2.1 Assessment
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Assessment	Business	result of the analysis of the quality and effectiveness of any activity undertaken by a statistical organisation and recommendations on how these can be improved	An Assessment can be of a variety of types. One example may include a gap analysis, where a current state is determined along with what is needed to reach its target state. Alternatively, an Assessment may compare current processes against a set of requirements, for example a new Statistical Need or change in the operating environment. An Assessment can use various classes as inputs, whether they are the main classes that the Assessment is about or auxiliary classes that help accomplish the Assessment.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Date Assessed	Date when the Assessment took place	1..*	Date
+Issues	Issues identified through the Assessment	0..*	String
+Recommendations	Recommendations from the Assessment	0..*	String
+Results	Results from the Assessment	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+2.2.2 Business Case
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Business Case	Business	proposal for a body of work that will deliver outputs designed to achieve outcomes	A Business Case is produced as a result of a detailed consideration of a Change Definition. It sets out a plan for how the change described by the Change Definition can be achieved. A Business Case usually comprises various evaluations. The Business Case will specify the stakeholders that are impacted by the Statistical Need or by the different solutions that are required to implement it. A Business Case will provide the reasoning for undertaking a Statistical Support Activity to initiate a new Statistical Programme Design for an existing Statistical Programme, or an entirely new Statistical Programme, as well as the details of the change proposed.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Date Approved	Date when the Business Case was approved	0..1	Date
+Date Initiated	Date when the Business Case was initiated	0..1	Date
+Outcomes (objectives)	Outcomes (objectives) that the proposed work in the Business Case would achieve	1..*	String
+Outputs (deliverables)	Outputs (deliverables) that the proposed work in the Business Case would deliver	1..*	String
+Type	E.g. new programme, permanent (indefinite) change to existing programme, temporary change to existing programme, cease programme.	1..*	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.3 Business Function
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Business Function	Business	activities undertaken by a statistical organisation to achieve its objectives	A Business Function delivers added value from a business point of view. It is delivered by bringing together people, processes and technology (resources), for a specific business purpose. Business Functions answer in a generic sense What business purpose does this Business Service _or Process Step_ serve? (c.f. Business Process answers the question of How?). Through identifying the Business Function associated with each Business Service or Process Step, it increases the documentation of the use of the associated Business Services and Process Steps, to enable future reuse. A Business Function may be defined directly with descriptive text and/or through reference to an existing catalogue of Business Functions. The phases and sub-processes defined within GSBPM can be used as an internationally agreed basis for cataloguing high-level Business Functions. A catalogue might also include Business Functions defined at a lower level than sub-process. For example, Identify and address outliers might be catalogued as a lower level Business Function with the Review and validate function (5.3) defined within GSBPM.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.4 Business Process
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Business Process	Business	structured and repeatable activity that performs one or more Business Functions	For example, a particular Statistical Programme Cycle might include several data acquisition activities, the corresponding editing activities for each acquisition and the production and dissemination of final outputs. Each of these may be considered separate Business Processes for the Statistical Programme Cycle.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.5 Business Service
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Business Service	Business	means of performing a Business Function	A Business Service may provide one means of accessing a particular Business Function. The operation of a Business Service will perform one or more Business Processes. The explicitly defined interface of a Business Service can be seen as representing a service contract. If particular inputs are provided then the service will deliver particular outputs in compliance within specific parameters (for example, within a particular period of time). Note: The interface of a Business Service is not necessarily IT based. For example, a typical postal service will have a number of service interfaces:
+- Public letter box for posting letters
+- Counter at post office for interacting with postal workers	 
+Attributes
+Name	Description	Cardinality	Value Type
+Service Interface	Specifies how to communicate with the service.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+2.2.6 Change Definition
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Change Definition	Business	structured, well-defined specification for a proposed change	A related class - the Statistical Need - is a change expression as it has been received by an organisation. A Statistical Need is a raw expression of a proposed change, and is not necessarily well-defined. A Change Definition is created when a Statistical Need is analysed by an organisation, and expresses the raw need in well-defined, structured terms. A Change Definition does not assess the feasibility of the change or propose solutions to deliver the change - this role is satisfied by the Business Case class. The precise structure or organisation of a Change Definition can be further specified by rules or standards local to a given organisation. It also includes the specific Concepts to be measured and the Population that is under consideration. Once a Statistical Need has been received, the first step is to do the conceptual work to establish what it is we are trying to measure. The final output of this conceptual work is the Change Definition. The next step is to assess how we are going to make the measurements - to design a solution and put forward a proposal for a body of work that will deliver on the requirements of the original Statistical Need.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.7 Core Input
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Core Input	Business	essential input for the Process Step Instance	Core Input is a sub-type of Process Input. Producers of official statistics often conceptualise data (and sometimes metadata) flowing through the statistical Business Process, having statistical value added by each Process Step. The concept of Core Input allows this notional flow of information through the production process to be traced, without confusing these inputs with other inputs - such as Parameter Inputs and Process Support Inputs that are controlling or influencing a particular Process Step but do not flow through the Business Process in the same sense. Typical Core Inputs are Data Sets and structural metadata.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.8 Core Output
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Core Output	Business	key output of the Process Step Instance	A Core Output is a sub-type of Process Output. Typically a Core Output is either a Process Input to a subsequent Process Step or it represents the final product from a statistical Business Process. In many cases a Core Output may be readily identified as an updated (value added) version of one or more Core Inputs supplied to the Process Step Instance.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.9 Environment Change
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Environment Change	Business	requirement for change that originates from a change in the operating environment of the statistical organisation	An Environment Change reflects change in the context in which a statistical organisation operates. Environment Changes can be of different origins and also take different forms. They can result from a precise event (budget cut, new legislation enforced) or from a progressive process (technical or methodological progress, application or tool obsolescence). Other examples of Environment Changes include the availability of a new Information Resource, the opportunity for new collaboration between organisations, etc.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Change Origin	Origin of the Environment Change (e.g. external, internal)	1..1	String
+Type	Type of the Environment Change (e.g. legal, method, software)	1..*	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.10 Information Request
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Request	Business	Statistical Need that is a request for new information for a particular purpose	An Information Request is a special case of Statistical Need that may come in an organised form, for example by specifying on which Subject Field the information is required. It may also be a more general request and require refinement by the statistical agency and formalised in a Change Definition.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Coverage of Information Required	Coverage of the information required	1..1	String
+Date Information Required	Date when the information is required	0..1	Date
+* Attributes inherited from super-type(s) are not included here
+
+2.2.11 Parameter Input
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Parameter Input	Business	Process Input that specifies the run-time configuration used in a parameterised Process Step Instance	Parameter Inputs may be provided where Rules and/or Business Service interfaces associated with a particular Process Step have been designed to be configurable based on Process Input Specification. Parameter Inputs are passed into the Process Step Instance.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Data Type	The data type of the Parameter Input.	1..1	ControlledVocabulary
+Parameter Role	Used to convey the role of this parameter. For example - weight, upper threshold, agreement level. This will likely become a controlled vocabulary (maybe external to allow more timely maintenance).	0..*	String
+Parameter Value	The content of the parameter.	1..1	String
+* Attributes inherited from super-type(s) are not included here
+
+2.2.12 Process Control
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Control	Business	set of decision points which determine the flow between the Process Steps used to perform a Business Process	The typical use of Process Control is to determine what happens after a Process Step is executed. The possible paths, and the decision criteria, associated with a Process Control are specified as part of designing a production process, captured in a Process Control Design. There is typically a very close relationship between the design of a process and the design of a Process Control.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.13 Process Control Design
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Control Design	Business	specification of the decision points required during the execution of a Business Process	The design of a Process Control typically takes place as part of the design of the process itself. This involves determining the conditional routing between the various sub-processes and services used by the executing process associated with the Process Control and specified by the Process Control Design. _It is possible to define a _Process Control where the next step in the_ Process Step_ that will be executed is a fixed value rather than a choice between two or more possibilities. Where such a design would be appropriate, this feature allows, for example, initiation of a step in the Process Step representing the GSBPM Process Phase (5) to always lead to initiation of GSBPM sub-process Integrate Data (5.1) as the next step. This allows a process designer to divide a Business Process into logical steps (for example, where each step performs a specific Business Function through re-use of a Business Service) even if these Process Steps will always follow each other in the same order. In all cases, the Process Control Design defines and the Process Control manages the flow between Process Steps, even where the flow is trivial. Process Design is left to focus entirely on the design of the process itself, not sequencing between steps.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.14 Process Design
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Design	Business	specification of each Process Step and description of their arrangement in a Business Process needed to perform a Business Function	A Process Design is the design time specification of a Process Step that is performed as part of a run-time Business Service. A Process Step can be as big or small as the designer of a particular Business Service chooses. From a design perspective, one Process Step can contain sub-steps, each of which is conceptualised as a (smaller) Process Step in its own right. Each of those sub-steps may contain sub-steps within them and so on. It is a decision for the process designer to what extent to subdivide steps. At some level it will be appropriate to consider a Process Step to be a discrete task without warranting further subdivision. At that level the Process Step is designed to process particular Process Inputs, according to a particular Process Method, to produce particular Process Outputs. The flow between a Process Step and any sub steps is managed via Process Control.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.15 Process Execution Log
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Execution Log	Business	Process Output listing events generated by a Process Step Instance	It may include data that was recorded during the real-time execution of the Process Step.	 
+Attributes
+Name	Description	Cardinality	Value Type
+End Time	The time the Process Step Instance ended.	0..1	Date
+Log Code	The identifier for the event that occurred during the process execution.	0..1	String
+Log Message	The human readable message for the event that occurred during the process execution.	0..1	String
+Log Severity	The severity for the event that occurred during the process execution.	0..1	String
+Log Type	The type of event that occurred during process execution (for example, an error).	0..1	ControlledVocabulary
+Start Time	The time the Process Step started.	0..1	Date
+* Attributes inherited from super-type(s) are not included here
+
+2.2.16 Process Input
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Input	Business	instance of an information class supplied to a Process Step Instance	Process Input might include information that is used to produce outputs (e.g. a Data Set), to control specific parameters of the process , and as reference to guide the process (e.g. a Code List).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.17 Process Input Specification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Input Specification	Business	set of information classes that function as inputs to a Process Design	The Process Input Specification enumerates the Process Inputs required at the time a Process Design is executed. For example, if five different Process Inputs are required, the Process Input Specification will describe each of the five inputs. For each required Process Input the Process Input Specification will record the type of information class (based on GSIM) which will be used as the Process Input (example types might be a Data Set or a Statistical Classification). The Process Input to be provided at the time of Process Step execution will then be a specific instance of the type of information class specified by the Process Input Specification. For example, if a Process Input Specification requires a Data Set then the corresponding Process Input provided at the time of Process Step execution will be a particular Data Set.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Process Input Type	E.g., Parameter Input, Process Support Input, CoreInput.	1..*	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.18 Process Method
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Method	Business	specification of the methodology which will be used to perform the work	The methodology specified by a Process Method is independent from any choice of technologies and/or other tools which will be used to apply that technique in a particular instance. The definition of the methodology may, however, intrinsically require the application of specific Rules (for example, mathematical or logical formulas). A Process Method describes a particular method for performing a Process Step.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.19 Process Metric
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Metric	Business	Process Output summarising some aspect or property of the execution	A Process Metric is a sub-type of Process Output which records information about the execution of a Process Step. For example, how long it took to complete execution of the Process Step and what percentage of records in the Core Input was updated by the Process Step to produce the Core Output. One purpose for a Process Metric may be to provide a quality measure related to the Core Output. For example, a Process Step with the Business Function of imputing missing values is likely to result, as its Core Output, in a Data Set where values that were missing previously have been imputed. Statistical quality measures, captured as Process Metrics for that Process Step may include a measure of how many records were imputed, and a measure of how much difference, statistically, the imputed values make to the dataset overall which can be also used as a part of a quality report associated with the Data Set produced. Another purpose for a Process Metric may be to measure an aspect of the Process Step which is not directly related to the Core Output it produced. For example, a Process Metric may record the time taken to complete the Process Step or other forms of resource utilisation (for example, human and/or IT). Often these two kinds of Process Metrics will be used in combination when seeking to, for example, monitor and tune a statistical Business Process so its statistical outputs achieve the highest level of quality possible based on the time, staff and/or IT resources that are available.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.20 Process Output
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Output	Business	instance of an information class produced by a Process Step Instance	 	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.21 Process Output Specification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Output Specification	Business	set of information classes that function as outputs of a Process Design	The Process Output Specification enumerates the Process Outputs that are expected to be produced at the time a Process Design is executed. For example, if five different Process Outputs are expected, the Process Output Specification will describe each of the five outputs. For each expected Process Output the Process Output Specification will record the type of information class (based on GSIM) which will be used as the Process Output (Example types might be a Data Set or a Statistical Classification). The Process Output to be provided at the time of Process Step execution will then be a specific instance of the type of information class specified by the Process Output Specification. For example, if a Process Output Specification expects a Data Set then the corresponding Process Output provided at the time of Process Step execution will be a particular Data Set.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.22 Process Pattern
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Pattern	Business	recommended set of Process Designs that is highlighted for possible reuse	In a particular Business Process, some Process Steps may be unique to that Business Process while others may be applicable to other Business Processes. A Process Pattern can be seen as a reusable template. It is a means to accelerate design processes and to achieve sharing and reuse of design patterns which have proved effective. Reuse of Process Patterns can indicate the possibility to reuse related Business Services. By deciding to reuse a Process Pattern, a designer is actually reusing the pattern of Process Designs and Process Control Designs associated with that Process Pattern. They will receive a new instance of the Process Designs and Process Control Designs. If they then tailor their instance of the Process Designs and Process Control Designs to better meet their needs they will not change the definition of the reusable Process Pattern.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.23 Process Step
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Step	Business	unit of work	A Process Step implements the Process Design specified in order to produce the outputs for which the Process Step was designed. Each Process Step is the use of a Process Design in a particular context (e.g., within a specific Business Process). At the time of execution a Process Step Instance specifies the actual instances of input classes (for example, specific Data Sets, specific Conceptual Variables) to be supplied.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Is Comprehensive	Used to indicate whether this Process Step has sub-_Process Steps_.	0..1	Boolean
+* Attributes inherited from super-type(s) are not included here
+
+2.2.24 Process Step Instance
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Step Instance	Business	executed step in a Business Process specifying the actual inputs to and outputs from an occurrence of a Process Step	Each Process Step is the use of a Process Design in a particular context (e.g. within a specific Business Process). At the time of execution a Process Step Instance specifies the actual instances of input classes (for example, specific Data Sets, specific Conceptual Variables) to be supplied. Each Process Step Instance may produce unique results even though the Process Step remains constant. Even when the inputs remain the same, metrics such as the elapsed time to complete execution of the process step may vary from execution to execution. For this reason, each Process Step Instance details of inputs and outputs for that instance of the implementation of the Process Step. In this way it is possible to trace the flow of execution of a Business Process through all the Process Steps which were involved.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.25 Process Support Input
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Process Support Input	Business	Process Input that influences the work performed by the Process Step Instance by providing additional information that affects the way Core Input is used	Process Support Input is a sub-type of Process Input.
+- Examples of Process Support Inputs could include: A technical or methodological handbook which can be used as a reference to assist the work performed (e.g. data editing, coding and classification)
+- An auxiliary Data Set which will influence imputation for, or editing of, a primary Data Set which has been submitted to the Process Step as the Core Input
+- A Provision Agreement which can be used as a supporting document
+- A repository or inventory of Process Methods or software system / architecture that are approved in the Organisation that could be used as reference	 
+Attributes
+Name	Description	Cardinality	Value Type
+Data Type	The data type of the Process Support Input.	0..1	ControlledVocabulary
+Value	The content of the Process Support Input.	0..1	String
+* Attributes inherited from super-type(s) are not included here
+
+2.2.26 Reference Document
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Reference Document	Business	document that is used to support, inform and guide the Business Processes	The examples of Reference Documents include: methodological handbooks, standards, legislation, corporate policies/guideline and best practices. Reference Documents are often unstructured and can be translated into Rules (e.g., quality requirements set by legislation can be written as a Rule). Note that documents can be physical (e.g., books) or electronical. The documents can be formal in terms of content (e.g., laws) or in terms of format (e.g., XML).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+2.2.27 Rule
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Rule	Business	mathematical or logical expression which can be evaluated to determine specific behavior	Rules are of several types: they may be derived from methods to determine the control flow of a process when it is being designed and executed (e.g. imputation rules, edit rules); and they may be used to drive the logical flow of a questionnaire. There are many forms of Rules and their purpose, character and expression can vary greatly.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Algorithm	The rule expressed as an algorithm.	0..1	String
+Command Code	Structured information used by a system to process the instruction.	0..*	String
+Expression	The expression of the rule that is executed.	0..1	String
+Is System Executable	Whether the rule is formatted to be executed by a system, or is only documentary.	0..1	Boolean
+Rule Type	A type taken from a controlled vocabulary. For example: Input, Comparison, Imputation, Edit, Derivation, Recode	0..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.28 Statistical Need
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Need	Business	requirement, request or other notification that will be considered by a statistical organisation.	The Statistical Need is a proposed or imposed requirement, request or other notification as it has been received by a statistical organisation. A Statistical Need is an expression of a requirement, and is not necessarily well-defined. A related class - Change Definition - is created when a Statistical Need is analysed by the organisation. Change Definition expresses the raw need in well-defined, structured terms.
+Once a Statistical Need has been received, the first step is to do the conceptual work to establish what it is we are trying to measure. The final output of this conceptual work is the Change Definition.
+In some cases, the Statistical Need can result from the Assessment of the quality, efficiency, etc. of an existing process. A Statistical Need may be of a variety of types including Information Request.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Is Met	Indicator for whether the request was met or unmet	0..1	Boolean
+* Attributes inherited from super-type(s) are not included here
+
+2.2.29 Statistical Programme
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Programme	Business	set of activities to produce statistics on a given Universe within the context of Subject Fields	The Statistical Programme provides the environmental context in which activities to produce statistics within a statistical organisation are conducted. Statistical Programme will usually correspond to an ongoing activity such as a survey or output series covered by GSBPM phase 4-7. Some examples of Statistical Programme are:
+- Labour Force Survey
+- Multipurpose Household Survey
+- National Accounts
+- Demography
+- Overseas Arrivals and Departures
+Related to the Statistical Programme class, there are Statistical Programme Design and Statistical Programme Cycle classes that hold the detailed information about the design and conduct of the Business Process. A Statistical Programme could take as inputs other Statistical Programmes outputs, e.g. national accounts. These activities are all carried out to generate Products. In the case of the traditional approach, an organisation has received a Statistical Need and produced a Change Definition and an approved Business Case. The Business Case will specify either a change to the design or methodology of an existing Statistical Programme, which will result in a new Statistical Programme Design; or a change to one or more existing Statistical Programmes (for example, to add an additional objective to the Statistical Programme); or result in a new Statistical Programme being created. This does not include statistical support functions such as metadata management, data management (and other overarching GSBPM processes) and design functions. These activities are conducted as part of Statistical Support Activity.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Budget	Estimate of expenditure	0..1	Number
+Date Ended	Date when the Statistical Programme was ended	0..1	Date
+Date Initiated	Date when the Statistical Programme was initiated	0..1	Date
+Legal Framework	Any legal framework (e.g., legal basis for the statistics to be produced by Statistical Programme)	0..*	String
+Legislative Reference	Any legislative materials, (e.g., parliamentary tabling documents)	0..*	String
+Source of Funding	Source of funding	0..1	String
+Programme Status	The current condition of the programme (e.g., New Proposal, Under Development, Current, Completed, Cancelled, Transferred to Another Organisation)	1..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.30 Statistical Programme Cycle
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Programme Cycle	Business	iteration of a Statistical Programme for a given Population	A Statistical Programme Cycle documents the execution of an iteration of a Statistical Programme according to the associated Statistical Programme Design for a given Population (e.g., certain reference period, geography). It identifies the activities that are undertaken as a part of the cycle and the specific resources required and processes used and description of relevant methodological information used in this cycle defined by the Statistical Programme Design.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Reference Period End	End date of the reference period	1..1	Date
+Reference Period Start	Start date of the reference period	1..1	Date
+* Attributes inherited from super-type(s) are not included here
+
+2.2.31 Statistical Programme Design
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Programme Design	Business	specification of the set of activities undertaken to investigate characteristics of a given Population	The Statistical Programme Design takes into account requirements such as resource, policy and compliance, specifies new processes, the use of existing ones and the description of relevant methodological information about that set of activities. It is a series of classes that provide the operational context in which a set of Business Processes is conducted. A simple example is where a Statistical Programme relates to a single survey, for example, the Labour Force Survey. The Statistical Programme will have a series of Statistical Programme Design classes that describe the methodology and design used throughout the life of the survey. When a methodological change is made to the survey, a new Statistical Programme Design is created to record the details of the new design.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Conceptual Framework	Description of the conceptual framework for the Statistical Programme (e.g., SNA).	0..*	String
+Status	Extensible redefined list (e.g., New Proposal, Under Development, Current, Completed, Cancelled, Transferred to Another Organisation).	1..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+2.2.32 Statistical Support Activity
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Support Activity	Business	activity that supports statistical production	This type of activity will include such functions as metadata management, data management, methodological research, and design functions. These activities correspond to the overarching processes in the GSBPM, and Corporate Support in GAMSO, as well as activities to create new or change existing Statistical Programmes which are covered by GSBPM phase 1-3, thus creating or updating Statistical Programme Designs.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Date Ended	Date when the Statistical Support Activity was ended.	0..1	Date
+Date Initiated	Date when the Statistical Support Activity was initiated.	0..1	Date
+Significant Events	A description of the real-world events which lead to the creation of the Statistical Support Activity.	0..1	String
+Status	The current condition of the programme (e.g., New Proposal, Under Development, Current, Completed, Cancelled, Transferred to Another Organisation).	1..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+3. Concept Group
+3.1 Group Diagram
+Click the diagram below and then select a class for an interactive step-through of the Concepts Group classes
+
+Alt text here
+3.2 Descriptive Information
+Concept Group is used to define the meaning of information to provide an understanding of what the data are measuring.
+
+The information classes defined within this group as as follows:
+
+3.2.1 Category
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Category	Concept	Concept whose role is to extensionally define and measure a characteristic	Categories for the Concept of sex include: Male, FemaleNote: An extensional definition is a description of a Concept by enumerating all of its subordinate Concepts under one criterion or sub-division. For example - the Noble Gases (in the periodic table) are extensionally defined by the set of elements including Helium, Neon, Argon, Krypton, Xenon, Radon. (ISO 1087-1)	class
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.2 Category Item
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Category Item	Concept	type of Node exclusive to a Category Set that contains a single Category	A Category Item contains the meaning of a Category without any associated representation. (For example: Male)	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.3 Category Set
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Category Set	Concept	type of Node Set for grouping Categories via Category Items	The Categories in a Category Set typically have no assigned Designations ( Codes).For example: Male, Female	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.4 Classification Family
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Classification Family	Concept	group of Classification Series based on a common Concept (e.g. economic activity)	Different classification databases may use different types of Classification Families and have different names for the families, as no standard has been agreed upon.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.5 Classification Index
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Classification Index	Concept	ordered list (e.g. alphabetical, in code order) of Classification Index Entries	A Classification Index shows the relationship between text found in statistical data sources (responses to survey questionnaires, administrative records) and one or more Statistical Classifications. A Classification Index may be used to assign the codes for Classification Items to observations in acquisitions of statistical data. A Statistical Classification is a subtype of Node Set. The relationship between Statistical Classification and Classification Index can also be extended to include the other Node Set types - Code List and Category Set. A Classification Index can relate to one particular or to several Statistical Classifications.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Coding Instructions	Additional information which drives the coding process for all entries in a Classification Index.	0..*	String
+Corrections	Summary description of corrections, which have occurred within the Classification Index. Corrections include changing the item code associated with a Classification Index Entry.	0..1	String
+Languages Available	A Classification Index can exist in several languages. Indicates the languages available. If a Classification Index exists in several languages, the number of entries in each language may be different, as the number of terms describing the same phenomenon can change from one language to another. However, the same phenomena should be described in each language.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.6 Classification Index Entry
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Classification Index Entry	Concept	word or a short text (e.g. the name of a locality, an economic activity or an occupational title) describing a type of object/unit or object property to which a Classification Item _applies, together with the code of the corresponding Classification Item_	A Classification Item is a subtype of Node. The relationship between Classification Item and Classification Index Entry can also be extended to include the other Node types - Code Item and Category Item. Each Classification Index Entry typically refers to one item of the Statistical Classification. Although a Classification Index Entry may be associated with a Classification Item at any Level of a Statistical Classification, Classification Index Entries are normally associated with items at the lowest Level.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Coding Instructions	Additional information which drives the coding process. Required when coding is dependent upon one or many other factors.	0..*	String
+Text	Text describing the type of object/unit or object property.	1..*	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.7 Classification Item
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Classification Item	Concept	type of Node exclusive to a Statistical Classification that combines a Category at a certain Level with a Code that represents it.	A Classification Item defines the content and borders of the associated Category. A Unit can be classified to one and only one item at each Level of a Statistical Classification. Categories are used to create sub-populations and must be mutually exclusive when contained into a Statistical Classification.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Case Laws	Refers to identifiers of one or more case law rulings related to the Classification Item.	0..*	MultilingualText
+Case Law Descriptions	Refers to descriptions of the case laws.	0..*	MultilingualText
+Case Law Dates	Refers to date of case laws.	0..*	Date
+Generated	Indicates whether or not the item has been generated to make the level to which it belongs complete.	0..1	Boolean
+Linked Items	Items of other classification versions or variants with which the item is linked, either as source or target, through Correspondence Tables.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.8 Classification Series
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Classification Series	Concept	ensemble of one or more Statistical Classifications, based on the same concept, and related to each other as versions or updates	Typically, these Statistical Classifications have the same name (e.g., ISIC or ISCO).	 
+Attributes
+Name	Description	Cardinality	Value Type
+Context	Classification Series can be designed in a specific context.	0..1	String
+Keywords	A Classification Series can be associated with one or a number of keywords.	0..*	String
+Objects/Units Classified	A Classification Series is designed to classify a specific type of object/unit according to a specific attribute.	1..1	String
+Subject Areas	Areas of statistics in which the Classification Series is implemented.	1..1	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.9 Code
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Code	Concept	Designation for a Category	Codes are unique within their Code List. Example: M (Male) F (Female).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.10 Code Item
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Code Item	Concept	type of Node exclusive to a Code List that combines a Category with a Code that represents it	A Code Item combines the meaning of the included Category with a Code representation.
+Codes are unique within their Code List. Example: M (Male) F (Female).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.11 Code List
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Code List	Concept	type of Node Set for grouping pairs of Categories and their Codes via Code Items	Similar Code Lists can be grouped together (via the relates to relationship inherited from Node Set). A Code List provides a predefined set of permissible values for an Enumerated Value Domain	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.12 Concept
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Concept	Concept	unit of thought differentiated by characteristics	 	 
+Attributes
+Name	Description	Cardinality	Value Type
+Definition	Representation of a Concept by a descriptive statement which serves to differentiate it from related Concepts.	1..*	MultilingualText
+* Attributes inherited from super-type(s) are not included here
+
+3.2.13 Concept System
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Concept System	Concept	set of Concepts structured by the relations among them	Here are 2 examples 1) Concept of Sex: Male, Female, Other 2) ISIC (the list is too long to write down)	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.14 Conceptual Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Conceptual Domain	Concept	set of valid Concepts	The Concepts can be described by either enumeration or by an expression.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Sentinel	If true, the domain is sentinel (i.e. values used to represent a state in the processing life-cycle e.g. missing data), otherwise the domain is substantive (i.e. values used to represent an observation of some Unit of interest).	1..1	Boolean
+* Attributes inherited from super-type(s) are not included here
+
+3.2.15 Conceptual Variable
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Conceptual Variable	Concept	use of a Concept as a characteristic of Unit Type intended to be observed	The Conceptual Variable combines the meaning of a Concept with a Unit Type, to define the characteristic that is to be measured. Here are 3 examples:
+- Sex of person
+- Number of employees
+- Value of production	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.16 Correspondence Table
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Correspondence Table	Concept	set of Maps between the Classification Items of two Statistical Classifications	These are typically: two versions from the same Classification Series; Statistical Classifications from different Classification Series; a variant and the version on which it is based; or, different versions of a variant. In the first and last examples, the Correspondence Table facilitates comparability over time. Correspondence relationships are shown in both directions. A Statistical Classification is a subtype of Node Set. The relationship between Statistical Classification and Correspondence Table can also be extended to include the other Node Sets - Code List and Category Set.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Floating	If the source and/or target Statistical Classifications of a correspondence table are floating classifications, the date of the correspondence table must be noted. The correspondence table expresses the relationships between the two Statistical Classifications as they existed on the date specified in the table.	0..1	String
+Relationship Type	A correspondence can define a 1:1, 1:N, N:1 or M:N relationship between source and target items.	0..1	String
+Source Level	The correspondence is normally restricted to a certain Level in the source Statistical Classification. In this case, target items are assigned only to source items on the given level. If no level is indicated, target items can be assigned to any level of the source Statistical Classification.	0..1	String
+Target Level	The correspondence is normally restricted to a certain Level in the target Statistical Classification. In this case, source items are assigned only to target items on the given level. If no level is indicated, source items can be assigned to any level of the target Statistical Classification.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.17 Datum
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Datum	Concept	value	A Datum is the actual instance of data that was acquired or derived. It is the value which populates a Data Point. A Datum is the value found in a cell of a table.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.18 Described Conceptual Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Described Conceptual Domain	Concept	Conceptual Domain defined by an expression	For example: all real numbers between 0 and 1. Described Conceptual Domain is a synonym for non-enumerated conceptual domain (source: GSIM)	Non-enumerated conceptual domain
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.19 Described Value Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Described Value Domain	Concept	Value Domain defined by an expression	For example: all real decimal numbers between 0 and 1. Described Value Domain is a synonym for non-enumerated value domain (source: GSIM)	Non-enumerated value domain
+Attributes
+Name	Description	Cardinality	Value Type
+Data Type	 	1..1	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.20 Designation
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Designation	Concept	association of a Concept with a sign that denotes it	Designation is the name given to an object for identification.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.21 Enumerated Conceptual Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Enumerated Conceptual Domain	Concept	Conceptual Domain expressed as a list of Categories	For example, the Sex Categories: Male and Female	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.22 Enumerated Value Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Enumerated Value Domain	Concept	Value Domain expressed as a list of Categories and associated Codes	Example - Sex Codes <m, male>; <f, female>; <o, other>.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.23 Instance Variable
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Instance Variable	Concept	use of a Represented Variable within a Data Set	The Instance Variable is used to describe actual instances of data that have been acquired. Here are 3 examples:
+1) Gender: Dan Gillman has gender <m, male>, Arofan Gregory has gender<m, male>, etc.
+2) Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.
+3) Endowment: Johns Hopkins has endowment of <3, $1,000,000 and above>, Yale has endowment of <3, $1,000,000 and above>, etc.It may include information about the source of the data.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.24 Level
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Level	Concept	set of Nodes in a hierarchical Node Set in which 1) each Node in the set is the same number of parent-child steps away from the root Node in the hierarchy, and 2) the set is defined by a unifying Concept	 	 
+Attributes
+Name	Description	Cardinality	Value Type
+Code Structure	Indicates how the code is constructed of numbers, letters and separators.	0..1	String
+Code Type	Indicates whether the item code at the Level is alphabetical, numerical or alphanumerical.	0..1	ControlledVocabulary
+Dummy Code	Rule for the construction of dummy codes from the codes of the next higher level (used when one or several categories are the same in two consecutive levels).	0..1	String
+Items	An ordered list of the Categories ( Classification Items) that constitute the Level.	1..*	MultilingualText
+Level Number	The number associated with the Level. Levels are numbered consecutively starting with level 1 at the highest (most aggregated) Level.	0..1	Number
+* Attributes inherited from super-type(s) are not included here
+
+3.2.25 Map
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Map	Concept	expression of the relation between a Classification Item in a source Statistical Classification and a corresponding Classification Item in the target Statistical Classification	The Map should specify whether the relationship between the two Classification Items is partial or complete. Depending on the relationship type of the Correspondence Table, there may be several Maps for a single source or target item. The use of Correspondence Tables and Maps can be extended to include all types of Node and Node Set. This means that a Correspondence Table could map between the items of Statistical Classifications, Code Lists or Category Sets.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.26 Measurement Type
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Measurement Type	Concept	defines the type of a measure e.g. mass or currency.	The Measurement Type groups all Measurement Units, which can be converted into each other. A Measurement Type can have a standard Measurement Unit, which can be used for conversion between different Measurement Units. There need not be any standard Measurement Unit for a given Measurement Type e.g. currency. Each Measurement Type has as a standard at most one Measurement Unit.	dimensionality(See ISO/IEC 11179-1 Ed 3, section 3.3.15, for a good explanation of dimensionality.)
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.27 Measurement Unit
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Measurement Unit	Concepts	metric for a measurement in terms of an official unit of measurement	Measurement Unit is a definite magnitude of a quantity, defined and adopted by convention or by law, that is used as a standard for measurement of the same kind of quantity. Measurement Units can be based on different Measurement Types such as weight, height, currency, duration etc. Measurement Units can be transformed into one another (e.g. kilometres into metres) if they refer to the same Measurement Type (e.g. length). The conversion rule attribute can be used to include a multiplicative factor e.g. the non-standard Measurement Unit 1000 kg = 1000 x the standard Measurement Unit kg.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Abbreviation	Abbreviation for the Measurement Unit e.g. kg for kilograms	0*	String
+Conversion Rule	Rule for conversion to the standard Measurement Unit, if this exists.	01	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.28 Node
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Node	Concepts	combination of a Category and related attributes	A Node is created as a Category, Code or Classification Item for the purpose of defining the situation in which the Category is being used.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Aggregation Type	To define the parent/child relationship between Nodes, it tells us whether we are applying the part whole relationship, or the super/sub type relationships.	0..1	String
+* Attributes inherited from super-type(s) are not included here
+
+3.2.29 Node Set
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Node Set	Concept	set of Nodes	Node Set is a kind of Concept System. Here are 2 examples:
+1) Sex Categories
+- Male
+- Female
+- Other
+2) Sex Codes
+- <m, male>
+- <f, female>
+- <o, other>	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.30 Population
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Population	Concepts	total membership of a defined class of people, objects or events	A Population is used to describe the total membership of a group of people, objects or events based on characteristics, e.g. time and geographic boundaries. Here are 3 examples:
+- Adult persons in Europe on 13 November 1956
+- Computer companies in the US at the end of 2012
+- Universities in the world on 1 January 2023	 
+Attributes
+Name	Description	Cardinality	Value Type
+Geography	The geographical area to which the population is associated.	0..1	String
+Reference Period	The time period to which the population is associated.	0..1	Date
+* Attributes inherited from super-type(s) are not included here
+
+3.2.31 Represented Variable
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Represented Variable	Concepts	combination of a characteristic of a population to be measured and how that measure will be represented	The measure applies to quantitative, categorical, and descriptive Conceptual Variable. Examples:
+The pair (Number of Employees, Integer), where Number of Employees is the characteristic of the population ( Conceptual Variable) and Integer is how that measure will be represented ( Substantive Value Domain). _If the _Conceptual Variable is Industry and the_ Substantive Value Domain_ is Level 1 of NACE 2007, the pair is (Industry, NACE 2007 - Level 1). The Represented Variable Sex of Person [1,2,3], has the Conceptual Variable (Sex of Person) and the representation (1=Male, 2=Female, 3=Other).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.32 Sentinel Value Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Sentinel Value Domain	Concepts	Value Domain containing sentinel values, i.e. processing-related special values	A sentinel value is one used for processing and with no subject matter content, such as missing or refused. Sentinel Value Domains can be enumerated (listed) or described. A Value Domain expressed as a list of Categories _for sentinel values or a description thereof. The scope and the meaning of the possible values are defined within the frame of the Conceptual Domain_ that the Sentinel Value Domain is associated with. Separating the sentinel values from the substantive ones allows a large reduction in the number of Value Domains, and thus Represented Variables and Instance Variables, that need to be maintained. Use of generic codes is recommended for Concepts which appear in many, if not, all Code Lists, e.g. <S_X, Unspecified>, <S_Z, Not applicable>, < S_R, Refusal>, <S_U, Unknown>	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.33 Statistical Classification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statistical Classification	Concept	hierarchically organised set of mutually exclusive and jointly exhaustive Categories that share the same or similar characteristics, used for meaningfully grouping the objects or units in the population of interest	The Categories are defined with reference to one or more characteristics of a particular population of units of observation. A Statistical Classification may have a flat, linear structure or may be hierarchically structured, such that all Categories at lower Levels are sub-_Categories_ of Categories at the next Level up. Categories in Statistical Classifications are represented in the information model as Classification Items.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Changes from Base Statistical Classification	Describes the relationship between the variant and its base Statistical Classification, including regroupings, aggregations added and extensions.	0..1	MultilingualText
+Changes from Previous Version or Update	A summary description of the nature and content of changes from the preceding version or update. Specific changes are recorded in the Classification Item object under the Changes from previous version and updates attribute.	0..1	MultilingualText
+Copyright	Statistical Classifications may have restricted copyrights. Such Statistical Classifications might be excluded from downloading. Notes the copyright statement that should be displayed in official publications to indicate the copyright owner.	0..*	String
+Current	Indicates whether or not the Statistical Classification is currently valid.	0..1	Boolean
+Derived From	A Statistical Classification can be derived from one of the classification versions of another Classification Series. The derived Statistical Classification can either inherit the structure of the classification version from which it is derived, usually adding more detail, or use a large part of its Classification Items, rearranging them in a different structure. Indicates the classification version from which the actual Statistical Classification is derived.	0..1	String
+Floating	Indicates if the Statistical Classification is a floating classification. In a floating statistical classification, a validity period should be defined for all Classification Items which will allow the display of the item structure and content at different points of time.	0..1	Boolean
+Introduction	The introduction provides a detailed description of the Statistical Classification, the background for its creation or variant, the classification variable and objects/units classified, classification rules etc.	0..1	MultilingualText
+Languages Available	A Statistical Classification can exist in one or several languages. Indicates the languages available, whether the version is completely or partially translated, and which part is available in which language.	0..*	String
+Legal Base	Indicates that the Statistical Classification is covered by a legal act or by some other formal agreement.	0..*	MultilingualText
+Name Types	A list of the defined types of alternative item names available for the Statistical Classification. Each name type refers to a list of alternative item names.	0..*	ControlledVocabulary
+Predecessor	For those Statistical Classifications that are versions or updates, notes the preceding Statistical Classification of which the actual Statistical Classification is the successor.	0..1	String
+Successor	Notes the Statistical Classification that superceded the actual Statistical Classification.	0..1	String
+Update	Indicates if the Statistical Classification is an update.	0..1	Boolean
+Updates Possible	Indicates whether or not updates are allowed within the classification version i.e. without leading to a new version. Indicate here what structural changes, if any, are permissable within a version. Note whether Classification Items can be added to the structure and whether they can be revalidated or invalidated. Such changes are more likely to be permissable in floating classifications. Also indicate whether changes to such things as Classification Item names and explanatory notes that do not involve structural changes are permissible within a version.	0..1	Boolean
+* Attributes inherited from super-type(s) are not included here
+
+3.2.34 Subject Field
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Subject Field	Concept	field of knowledge under which a set of Concepts and their Designations is used	For example, labour market, environmental expenditure, tourism, etc.	subject area, theme
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.35 Substantive Value Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Substantive Value Domain	Concept	Value Domain containing substantive values, where a substantive value is subject matter related	A substantive value is one representing subject matter content, such as <f, female> in a gender classification. The scope and the meaning of the possible values are defined within the frame of the Conceptual Domain that the Substantive Value Domain is associated with. Example: <0, Pre-primary>, <1, Primary>, <2, Lower secondary>, < 3, Upper secondary>, <4, Post-secondary non-tertiary>, <5, First stage of tertiary education>, <6, Second stage of tertiary education> where the scope and meaning of the values are defined within Categories for levels of education.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.36 Unit
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Unit	Concept	entity for which information is sought and for which statistics are ultimately compiled	Here are 3 examples:
+- Individual US person (e.g., Arofan Gregory, Dan Gillman, Barack Obama, etc.)
+- Individual US computer companies (e.g., Microsoft, Apple, IBM, etc.)
+- Individual US universities (e.g., Johns Hopkins, University of Maryland, Yale, etc.)	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.37 Unit Type
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Unit Type	Concept	class or group of Units based on a single characteristic	A Unit Type is used to describe a class or group of Units based on a single characteristic, but with no specification of time and geography. For example, the Unit Type of Person groups together a set of Units based on the characteristic that they are Persons. It concerns not only Unit Types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit.	Object class (ISO 11179)
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.38 Universe
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Universe	Concept	specialized Unit Type, but not by time or geography	The description statement of a Universe is generally stated in inclusive terms such as All persons with a university degree. Occasionally a Universe is defined by what it excludes, i.e., All persons except those with a university degree. In both cases, adding the condition of the university degree specializes persons, which is a Unit Type.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+3.2.39 Value Domain
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Value Domain	Concept	set of permissible values for a Conceptual Variable	The values can be described by enumeration or by an expression.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4. Exchange Group
+4.1 Group Diagram
+Click the diagram below and then select a class for an interactive step-through of the Exchange Group classes
+
+Alt text here
+4.2 Descriptive Information
+Exchange Group is used to catalogue the information that is exchanged within and outside of a statistical organisation.
+
+The information classes defined within this group as as follows:
+
+4.2.1 Data Harvest
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Harvest	Exchange	Exchange Instrument to pass information between two sources, usually by a machine to machine mechanism	Examples of Data Harvest include web scraper, API (e.g., to acquire data from administrative sources), scanner, sensor, etc.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.2 Dissemination Instrument
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Dissemination Instrument	Exchange	Exchange Instrument to disseminate information	Examples include: API or web services for data dissemination	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.3 Exchange Instrument
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Exchange Instrument	Exchange	concrete and usable tool to exchange information	The Exchange Instrument is a tool to receive or send information and is used for external and internal purposes. Different Exchange Instruments are used for data acquisition and dissemination. An example of Exchange Instrument for receiving information is Questionnaire. An example of Exchange Instrument for sending information is Dissemination Instrument. Additional Exchange Instruments can be added to the model as needed by individual organisations.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Direction	Direction of the Exchange Instrument: acquire or disseminate.	1..1	String
+* Attributes inherited from super-type(s) are not included here
+
+4.2.4 Exchange Specification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Exchange Specification	Exchange	outline or description specifying the design of the Exchange Instrument	GSBPM Phase 2 (Design) results in an Exchange Specification that specifies the design of the data acquisition or dissemination instruments (e.g., Questionnaire, web page). In GSBPM Phase 3 (Build), these instruments are built based on the tools.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.5 Information Consumer
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Consumer	Exchange	Role that entails consuming data and information	The Information Consumer accesses a set of information in a Product that is made available via a Dissemination Instrument. The Information Consumer subscribes to the Provision Agreement, which sets out conditions of access. The Information Consumer can be defined in a broad sense with a persona concept (group of Individuals) without specific details.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.6 Information Provider
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Provider	Exchange	Role that entails providing data and information	An Information Provider possesses sets of information (that it has acquired, for example by collecting or purchasing it) and is willing to supply that information (data or referential metadata) to the statistical organisation. The two parties use a Provision Agreement to agree on the Data Structure and Referential Metadata Structure of the data to be exchanged via an Exchange Instrument.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.7 Instance Question
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Instance Question	Exchange	use of a Question in a particular Questionnaire	The Instance Question is the use of a Question in a particular Questionnaire Component. This also includes the use of the Question in a Question Block, which is a particular type of Questionnaire Component.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Question Purpose	A description of the purpose of the question, whether the question has a specific expected function.	0..1	MultilingualText
+Question Text	The text which describes the information which is to be obtained.	1..1	MultilingualText
+* Attributes inherited from super-type(s) are not included here
+
+4.2.8 Instance Question Block
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Instance Question Block	Exchange	use of a Question Block in a particular Questionnaire	The Instance Question Block is the use of a Question Block in a particular Questionnaire Component. This also includes the use of a Question Block in another Question Block, as it is a particular type of Questionnaire Component.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.9 Instance Statement
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Instance Statement	Exchange	use of a Statement in a particular Questionnaire or more specifically a Questionnaire Component	The Instance Statement is the use of a Statement in a particular Questionnaire Component. This also includes the use of the Statement in a Question Block, which is a particular type of Questionnaire Component.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Statement Text	The information, note, fact or instruction text making up the statement.	0..1	MultilingualText
+* Attributes inherited from super-type(s) are not included here
+
+4.2.10 Output Specification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Output Specification	Exchange	outline or description of how Information Sets are presented and arranged in Products for Information Consumers	The Output Specification specifies Products and uses the Presentations they contain. The Output Specification may be fully defined during the design process (such as in a paper publication or a predefined web report), or may be a combination of designed specifications supplemented by user selections (such as in an online data query tool).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.11 Presentation
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Presentation	Exchange	way data and referential metadata are presented	Presentations present data and referential metadata from Information Sets. Presentation can be used by an Output Specification to specify how Information Set in Product is presented.
+Presentation can be in different forms; e.g. tables, graphs, structured data files. Examples:
+- A table of data. Based on a Data Set, the related Data Structure is used to label the column and row headings for the table. The Data Set is used to populate the cells in the table. Reference metadata is used to populate footnotes and cell notes on the table. Confidentiality rules are applied to the Data Set to suppress any disclosive cells.
+- A data file based on a standard (e.g. SDMX).
+- A PDF document describing a Statistical Classification.
+- Any structural metadata object expressed in a standard format (e.g. DDI 3.1 XML).
+- A list of Products or services (e.g. a product catalogue or a web services description language (WSDL) file).
+- A web page containing Statistical Classifications, descriptions of Conceptual Variables, etc.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.12 Product
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Product	Exchange	package of content that can be disseminated as a whole	A Product packages Information Sets for an Information Consumer. The Product is generated according to Output Specifications, which define how the information from the Information Sets are presented (via Presentations) to the Information Consumer. A Provision Agreement between the statistical organisation and the Information Consumer governs the use of a Product by the Information Consumer. The Provision Agreement, which may be explicitly or implicitly agreed, provides the legal or other bases by which the two parties agree to exchange data. In many cases, dissemination Provision Agreements are implicit in the terms of use published by the statistical organisation. For static Products (e.g. paper publications), specifications are predetermined. For dynamic Products, aspects of specification could be determined by the Information Consumer at run time. Both cases result in Output Specifications specifying Information Set data or referential metadata that will be included within the Product.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.13 Provision Agreement
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Provision Agreement	Exchange	legal or other basis by which two parties agree to exchange data	A Provision Agreement between the statistical organisation and the Information Provider (acquisition) or the Information Consumer (dissemination) governs the use of Exchange Instrument. The Provision Agreement, which may be explicitly or implicitly agreed, provides the legal or other basis by which the two parties agree to exchange data. The parties also use the Provision Agreement to agree the Information Structure of the information to be exchanged.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.14 Question
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Question	Exchange	text used to elicit a response for a Conceptual Variable	A Question may be a single question used to obtain a response, or may be a multiple question, a construct which links multiple sub-questions, each with their own response. A Question also includes a relationship to the Value Domain to document the associated response criteria for the question. A single response question will have one Value Domain associated with it, while a multiple question may have more than one Value Domain. A Question should be designed with re-use in mind, as it can be used in multiple Questionnaires. In a national implementation, Question could be further subtyped into:
+- QuestionGrid, useful to model questions as grids/tables. It is actually a cube-like structure providing dimension information, labelling options, and response domains attached to one or more cells within the grid. For instance, a two-way table requesting to provide turnovers broken down by affiliates.
+- QuestionItem, a simple question that is necessarily one dimensional. For example: How old are you?	Multiple Question
+Attributes
+Name	Description	Cardinality	Value Type
+Question Purpose	A description of the purpose of the question, whether the question has a specific expected function.	0..1	MultilingualText
+Question Text	The text which describes the information which is to be obtained.	1..1	MultilingualText
+* Attributes inherited from super-type(s) are not included here
+
+4.2.15 Question Block
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Question Block	Exchange	set of Questions, Statements or instructions which are used together	A Question Block should ideally be designed for reuse. The Question Block is a type of Questionnaire Component. A statistical organisation will often have a number of Question Blocks which they reuse in a number of Questionnaires. Examples of Question Blocks include:
+- Household Question Block
+- Income Question Block
+- Employment Question Block	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.16 Questionnaire
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Questionnaire	Exchange	Exchange Instrument to elicit information from observation Units	This is an example of a way statistical organisations acquire information (an Exchange Instrument). Each collection mode (e.g. in-person, CAPI (Computer-assisted personal interviewing), online Questionnaire) should be interpreted as a new Questionnaire derived from the Questionnaire Specification. The Questionnaire is a tool in which data is obtained.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Media	Description of the kind of media conceived for the use of the Questionnaire (printed, electronic, etc.).	1..1	String
+Support Artifacts	A list of devices, software programs, storage media, gadgets or other tools needed to support the use of the Questionnaire.	0..*	String
+Survey	Information on the survey which the Questionnaire will be used by.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+4.2.17 Questionnaire Component
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Questionnaire Component	Exchange	record of the flow of a Questionnaire Specification and its use of Questions, Question Blocks and Statements	A Questionnaire Component defines the structure of the Questionnaire Specification, as a combination of Questions, Question Blocks and Statements. It is the class which groups together all the components of a Questionnaire. A Questionnaire Component is recursive, in that it can refer to other Questionnaire Components and accompanying Questionnaire Logic classes at a lower level. It is only at the top level where the Questionnaire Component links to the Questionnaire Specification.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Component Sequence	The order in which Instance Question, and Instance Statement appear in the Questionnaire Component.	0..*	Number
+* Attributes inherited from super-type(s) are not included here
+
+4.2.18 Questionnaire Logic
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Questionnaire Logic	Exchange	management/control of the sequence of Questions, Question Blocks and Statements based on factors such as the current location, the response to the previous questions etc., invoking navigation and validation Rules to apply	 	Routing
+Attributes
+Name	Description	Cardinality	Value Type
+Routing Information	Routing information, which will also use responses from Rule.	1..*	String
+* Attributes inherited from super-type(s) are not included here
+
+4.2.19 Questionnaire Specification
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Questionnaire Specification	Exchange	Exchange Specification for Questionnaire	This represents the complete questionnaire design, with a relationship to the top-level Questionnaire Component. There may be many different Questionnaire Specifications, for the same surveys, or tailored to individual observation Units (respondents) so that there would be a different Questionnaire Specification for each respondent. The design would also differ depending upon the specific mode of collection the Questionnaire is designed for.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.20 Register
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Register	Exchange	written and complete record containing regular entries of items and details on particular sets of objects	In official statistics, statistical registers and adminisitrative registers (registers maintained by other organisations, usually administrative data owners) are usually distinguished. In GSIM, the information class Register is used to describe both types because the attributes are more or less the same so from the information management point of view, they can be handled as one GSIM class. There is usually a purpose or authority for maintaining the Register and each object in the Register is described using a pre-defined set of characteristics. Examples include business and population registers as used by statistical organisations. Therefore, from statistical perspective, the Register can be interpreted as a set of objects for a given Population, updated on a regular basis, containing information on identification, accessibility of Units and other attributes. The Register contains the current and historical statuses of the Population and the causes, effects and sources of alterations in the Population. In order to better understand how the Register is used in GSIM, the use cases for the different scenarios are explained. These scenarios are:
+- Register _as Information Set_ maintained and regularly updated by the statistical organisation.
+- Register _as Information Set_ for survey frames/sample frames.
+- Register _as Information Set_ for statistical Products.
+- Register _as Information Set_ used as direct or auxiliary information for the production of statistics.
+- Register _as Information Set_ as a source of administrative information obtained usually from external organisations.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+4.2.21 Statement
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Statement	Exchange	report of facts in a Questionnaire	Statements are often included to provide further explanation to respondents. Example: The following questions are about your health. The class is also used to represent completion instructions for the interviewer or respondent. Statement should be designed with re-use in mind as it can be used in numerous Questionnaires.	Interviewer InstructionInstruction
+Attributes
+Name	Description	Cardinality	Value Type
+Statement Text	The information, note, fact or instruction text making up the Statement.	0..1	MultilingualText
+* Attributes inherited from super-type(s) are not included here
+
+5. Structure Group
+5.1 Group Diagram
+Click the diagram below and then select a class for an interactive step-through of the Structures Group classes
+
+Alt text here
+5.2 Descriptive Information
+Structure Group is used to structure information throughout the statistical process.
+
+The information classes defined within this group as as follows:
+
+5.2.1 Attribute Component
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Attribute Component	Structure	role given to a Represented Variable in the context of a Data Structure, which supplies information other than identification or measures	For example:
+- the embargo time (at which point the observation will be made publicly available)
+- the base period of the data in the series	 
+Attributes
+Name	Description	Cardinality	Value Type
+Is Mandatory	When there is an attribute in a Dimensional Data Structure, this sets a status to indicate whether it is mandatory or optional to include it in that particular dimensional Data Set.	0..1	Boolean
+Attachment Level	The description of what Level a certain attachment is at. For example, in SDMX this could be Data Set, Observation, Series, Group.	0..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+5.2.2 Data Point
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Point	Structure	container for a single value of an Instance Variable	A Data Point is a cell or a placeholder for a value ( Datum) it may contain (note that a data point could be empty). A field in a Data Structure which corresponds to, for example, a cell in a table. The Data Point is structural and distinct from the value (the Datum) that it holds.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.3 Data Record
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Record	Structure	collection of Data Points related to a given Unit or Population	For example (1212123, 48, American, United Kingdom) specifies the age (48) in years, the current citizenship (American), and the country of birth (United Kingdom) for a person with social security number 1212123. For the case of unit data, it can be structured by Logical Record.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.4 Data Resource
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Resource	Structure	organised collection of stored information made of one or more Data Sets	Data Resources are collections of data. Data Resource is a specialization of an Information Resource.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.5 Data Set
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Set	Structure	organised collection of data	Data Sets could be used to organise a wide variety of content, including observation registers, time series, longitudinal data, survey data, rectangular data sets, event-history data, tables, data tables, registers, data cubes, data warehouses/marts and matrixes. An example of a population unit Data Set (microdata) could be a collection of three Data Records (1212123, 48, American, United Kingdom), (1212111, 38, Hungarian, United Kingdom), and (1212317, 51, Canadian, Mexico), each containing the social security number, age, citizenship and country of birth of an individual. An example of a population dimensional Data Set (aggregate) could be a collection of three entries (Mexico, 2021, 130.3), (United Kingdom, 2021, 67.33), and (Italy, 2022, 60.24), each containing the name of the country, year of interest and population of the country in millions.	Database, data file, file, table
+Attributes
+Name	Description	Cardinality	Value Type
+Type	Type of Data Set (e.g., unit Data Set, dimensional Data Set)	0..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+5.2.6 Data Structure
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Structure	Structure	structure of an organised collection of data ( Data Set)	The structure is described using Data Structure Components that can be either Attribute Components, Identifier Components or Measure Components. Examples for unit data include social security number, country of residence, age, citizenship, country of birth, where the social security number and the country of residence are both identifying components and the others are measured variables obtained directly or indirectly from the person ( Unit).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.7 Data Structure Component
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Data Structure Component	Structure	role of the Represented Variable in the context of a Data Structure	A Data Structure Component can be an Attribute Component, Measure Component or an Identifier Component.
+- Example of Attribute Component: publication status of an observation such as provisional, revised.
+- Example of Measure Component: age and height of a person in a Unit Data Set or number of citizens and number of households in a country in a Data Set for multiple countries (dimensional Data Set).
+- Example of Identifier Component: personal identification number of a Swedish citizen for unit data or the name of a country in the European Union for dimensional data.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.8 Dimensional Data Structure
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Dimensional Data Structure	Structure	structure of an organised collection of a dimensional data	For example, (country, gender, number of citizens) where the country and gender are the Identifier Component and the number of citizens is a Measure Component.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Group	A composite association to one or more component lists.	0..*	String
+* Attributes inherited from super-type(s) are not included here
+
+5.2.9 Identifier Component
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Identifier Component	Structure	role given to a Represented Variable in the context of a Data Structure to identify the Units	An Identifier Component is a sub-class of Data Structure Component. The personal identification number of a Swedish citizen for unit data or the name of a country in the European Union for dimensional data.	 
+Attributes
+Name	Description	Cardinality	Value Type
+Is Composite	Indicates if the key is composite.	0..1	Boolean
+Is Unique	Indicates if the key is unique.	0..1	Boolean
+Role	Specifies the type of id represented (entity, indicator, count, time, geography).	0..1	ControlledVocabulary
+* Attributes inherited from super-type(s) are not included here
+
+5.2.10 Information Resource
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Resource	Structure	abstract notion that is any organised collection of information	Statistical activity uses Information Resources to produce information. There currently are only two concrete sub-classes: Data Resource and Referential Metadata Resource. The Information Resource allows the model to be extended to other types of resource.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.11 Information Set
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Set	Structure	organised collection of statistical content	Statistical organisations acquire, process, analyze and disseminate Information Sets, which contain data ( Data Sets), referential metadata ( Referential Metadata Sets), or potentially other types of statistical content, which could be included in additional types of Information Set.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.12 Information Structure
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Information Structure	Structure	describes the structure of an Information Set	 	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.13 Logical Record
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Logical Record	Structure	set of attributes defined by Unit Type describing a specific instance of a Data Record which provides an additional relationship on top of Data Structure	Logical Records provide an additional relationship on top of the Data Structure (e.g., an individual is a part of family, information from record linkage)	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.14 Measure Component
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Measure Component	Structure	role given to a Represented Variable in the context of a Data Structure to hold the observed/derived values for a particular Unit	A Measure Component is a sub-class of Data Structure Component. For example, age and height of a person in a Unit Data Set or number of citizens and number of households in a country in a Data Set for multiple countries (dimensional Data Set).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.15 Record Relationship
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Record Relationship	Structure	description of relationships between Logical Records within a Unit Data Structure	Record Relationship must have both a source Logical Record and a target Logical Record in order to define the relationship. Example: Relationship between a person and household Logical Records within a unit Data Set.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.16 Referential Metadata Attribute
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Attribute	Structure	characteristic that describes or qualifies Referential Metadata Subject	A set of Referential Metadata Attributes is structured by Referential Metadata Structure to describe Referential Metadata Subject. Examples of Referential Metadata Attributes can be Represented Variables (e.g., Accuracy, Timeliness when describing quality information) or other GSIM class (e.g., Statistical Classification, Contact, Owner).	 
+Attributes
+Name	Description	Cardinality	Value Type
+Is Container	Boolean indicating whether or not this attribute actually will contain a value when reported in a metadata set.	0..1	Boolean
+* Attributes inherited from super-type(s) are not included here
+
+5.2.17 Referential Metadata Content Item
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Content Item	Structure	actual content for Referential Metadata Attribute	Referential Metadata Content Item can take different formats (e.g., text, number, value from a predefined codelist, table).	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.18 Referential Metadata Resource
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Resource	Structure	organised collection of stored information consisting of one or more Referential Metadata Sets	Referential Metadata Resources are collections of structured information. This class is a specialization of an Information Resource.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.19 Referential Metadata Set
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Set	Structure	organised collection of referential metadata for a given Referential Metadata Subject Item	Each Referential Metadata Set uses a Referential Metadata Structure to define a structured list of Referential Metadata Attributes for a given Referential Metadata Subject Item.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.20 Referential Metadata Structure
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Structure	Structures	structure of an organised collection of referential metadata	A Referential Metadata Structure defines a structured list of Referential Metadata Attributes for a given Referential Metadata Subject. Examples of Referential Metadata Structure include structures for describing quality information and methodologies information (e.g., ESS Standard for Quality Reports Structure) or characteristics of registers as well as a structure of documentation storing information necessarily for internal dataset management (e.g., GDPR status, existence of information on minor).	Metadata Structure Definition
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.21 Referential Metadata Subject
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Subject	Structure	subject for which an organised collection of referential metadata is reported	The Referential Metadata Subject identifies the subject of the metadata that can be reported using this Referential Metadata Structure. These subjects may be any GSIM information class on which organised set of metadata is needed, such as Statistical Programme, Data Set, Questionnaire _and Statistical Classification_.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.22 Referential Metadata Subject Item
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Referential Metadata Subject Item	Structure	actual subject for which referential metadata is reported	Examples are an actual Product such as Balance of Payments and International Investment Position, Australia, June 2013, or a collection of Data Points such as the Data Points for a single region within a Data Set covering all regions for a country.	 
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+5.2.23 Unit Data Structure
+Definition
+Class	Group	Definition	Explanatory Text	Synonyms
+Unit Data Structure	Structure	structure of an organised collection of unit data	For example (social security number, country of residence, age, citizenship, country of birth) where the social security number and the country of residence are the identifying components ( Identifier Component) and the others are measured variables obtained directly or indirectly from the person ( Unit) and are Measure Components of the Logical Record.	File description, dataset description
+Attributes
+* Attributes inherited from super-type(s) are not included here
+
+A. Acknowledgements
+For the revision of GSIM 2.0, following team members kindly dedicated their time, and contributed their knowledge, experience, and expertise: Flavio Rizzolo and Francine Kalonji (Co-Chair), and Farrah Sanjari (Statistics Canada), Ayman Hathoot (CAPMAS, Egypt), Essi Kaukonen and Mikko Saloila (Statistics Finland), Florian Vucko (Insee, France), Andrea Petres and Zoltan Vereczkei (Hungary), Claudia Brunini, Cecilia Casagrande, Giorgia Simeoni, Laura Tosco and (Istat, Italy), Raúl Mejía and Juan Munoz (Mexico), Daan Swinkels (Statistics Netherlands), Jenny Linnerud (Norway), Krishnan Ambady (ONS, UK), Daniel Gillman (Bureau of Labour Statistics, US), InKyung Choi and Chris Jones (UNECE)
+
+↑

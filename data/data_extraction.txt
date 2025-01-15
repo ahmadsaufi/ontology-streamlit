@@ -1,0 +1,628 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : Fasih-Designer
+ Source Server Type    : SQL Server
+ Source Server Version : 15002116
+ Source Host           : 10.0.77.25:1433
+ Source Catalog        : icsdb-dev
+ Source Schema         : data_extraction
+
+ Target Server Type    : SQL Server
+ Target Server Version : 15002116
+ File Encoding         : 65001
+
+ Date: 30/07/2024 07:56:44
+*/
+
+
+-- ----------------------------
+-- Table structure for extraction_column
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[extraction_column]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[extraction_column]
+GO
+
+CREATE TABLE [data_extraction].[extraction_column] (
+  [id] uniqueidentifier  NOT NULL,
+  [extraction_table_id] uniqueidentifier  NOT NULL,
+  [name] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [data_type] varchar(100) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [from_template] bit DEFAULT 1 NULL,
+  [pk] bit DEFAULT 0 NULL,
+  [label] nvarchar(max) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [question_type_id] int  NULL,
+  [position] int  NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[extraction_column] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of extraction_column
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'A6DC65BA-3D9B-4005-B102-0002621E146E', N'F09A4CCB-D699-43BF-B063-B20C8E699EA4', N'r506a_2022', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'9803DE50-C20C-4E31-95DF-00044E31C78D', N'C0E9AEAB-FB44-4CCD-B201-50E0C289A15A', N'level_1_code', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'0B2AC983-CB8B-44A1-9248-0005705149CB', N'5F26C33F-7FED-4FC6-922B-DE674FC3D7E1', N'r513b1', N'INT', N'1', N'0', N'1. Jumlah lokasi<br><p style=''color:blue''><span class="font-semibold">Data Tahun 2021 Rincian 513b1:  $pre513b1</span></p>', N'28', N'5')
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'D71831A3-131E-443D-89F2-0005C9B63DC5', N'25C131FD-5310-46D5-AA5A-BF3BA92D958C', N'is_tarik_sample', N'BOOLEAN', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'7A6B108A-543C-44FE-B061-0006BE3DFFBA', N'F5F306F1-7E5A-45B5-99D3-CCE8F5F2D944', N'level_8_code', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'2B80913E-77AF-4F1A-8FDB-000749757BF3', N'EC47D00C-15F4-4ACE-A28F-AB019ACE5160', N'infra_kesehatan_baru', N'JSON_ARRAY', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'A671ED35-466B-422D-B9EC-0007D32EB360', N'DE6F5956-66BF-4519-86CC-1B41F823EA45', N'r1304b_2021', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'D147CEAE-9D33-4BA9-8414-0008E86164B7', N'F631897C-E21F-43DA-8EDB-EA355E46AE5E', N'assignment_status_id', N'INT', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'1B41257E-CE23-40F6-844A-000A7C0BDA31', N'53154753-2C46-4979-AE52-D6C8AEFD87CE', N'level_3_code', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'5AB757C4-F64B-4B81-875B-000A96C5F624', N'028EC89C-C95A-42E7-BDFC-E7E82F5775C3', N'id_timestamp', N'STRING', N'0', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'0B23CD3D-5020-4710-AA35-000BA807948E', N'18154FCA-3FBB-49F4-9DA0-1546AA0D2DFC', N'p917_96', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'68FC15AF-2D89-4C8C-AD63-000BEAE78A8E', N'0D84E56D-2B2B-4574-AA61-1349EA95831E', N'username', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'5D51C6C7-6428-4B2D-98CA-000C1A15896D', N'86DA929C-91A9-41B8-8D63-2DBEF4447866', N'level_3_full_code', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'FDBFBDA0-BBC5-46B8-A16E-000C339717F5', N'FEE665AC-6804-4E71-BE00-6ED3150B5AFA', N'r701_k2_2021', N'STRING', N'1', N'0', N'New Question', N'4', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'11E9DCA7-84B7-49AD-B07C-000C6B62B4DB', N'D674C25B-5509-4585-9220-E011B3225C00', N'l2_r803', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'4B78DFEF-98F3-4593-A067-000C779488C2', N'23B85464-8DC1-4DD1-A358-32C5CA7777BB', N'l2_r808_1', N'JSON_ARRAY', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'C1D8CBAB-560A-449B-BA4C-000DB4B7EB71', N'025589D3-F990-4266-98D0-CABD4DFC784F', N'b5r50e', N'SINGLE_LABEL_VALUE', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'CC995FCB-C68F-4047-9A6E-000E34963A1D', N'D95A9D43-1A69-45CB-9A6B-8C823BC60CA0', N'level_8_name', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'A68088F3-16F3-424D-B514-000FEE48E4A1', N'320F99BE-7FA7-4D48-95E7-CBCCCF1AA0FB', N'b5r41b_info', N'STRING', N'1', N'0', NULL, NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'7DD22121-ACA5-46EF-B5BC-0010915AE93C', N'B2DF4DA3-919A-4362-B089-DDDCB8EEA429', N'b1r12', N'STRING', N'1', N'0', N'Nomor HP Pemberi Informasi Utama: ', N'25', N'3')
+GO
+
+INSERT INTO [data_extraction].[extraction_column] ([id], [extraction_table_id], [name], [data_type], [from_template], [pk], [label], [question_type_id], [position]) VALUES (N'85F536AD-CE26-4605-A109-FFFE25BA71E6', N'C114BE85-3CC2-4C7B-8FB6-06C7C1DE6C9A', N'assignment_id_timestamp', N'STRING', N'0', N'0', NULL, NULL, NULL)
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for extraction_output_tables
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[extraction_output_tables]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[extraction_output_tables]
+GO
+
+CREATE TABLE [data_extraction].[extraction_output_tables] (
+  [id] int  NOT NULL,
+  [name] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[extraction_output_tables] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of extraction_output_tables
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[extraction_output_tables] ([id], [name]) VALUES (N'1', N'DASHBOARD')
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for extraction_table
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[extraction_table]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[extraction_table]
+GO
+
+CREATE TABLE [data_extraction].[extraction_table] (
+  [id] uniqueidentifier  NOT NULL,
+  [extraction_template_id] uniqueidentifier  NOT NULL,
+  [name] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [roster_level] smallint DEFAULT 0 NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[extraction_table] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of extraction_table
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'25A24755-55CB-4B93-B482-00262FB4BD57', N'D7B4AE92-500D-4A00-A3E8-26F7D871620C', N'r1106_sarana_nested', N'2')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'AAB0D076-140C-4965-86BE-0052CDF9B16D', N'96E88C8C-F689-44CD-9896-B2C3345BBC0F', N'base_table_assignment_history', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'D296489C-F27D-4FE9-A8D5-00BAC884B3D4', N'DFF9F5E5-2127-4EC7-B756-CDD3D09418D0', N'sekolah_swasta_baru_nested', N'2')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'E0490A1C-BA87-4522-9D9B-00FB012F65F0', N'DF46FEC5-6A98-443D-8104-60E512E49293', N'pengelola_blok5', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'DB01F82D-C86A-4F25-9F0E-012C2D246AB1', N'56F8E88F-57A9-480A-901D-845CF8B7EBE8', N'r704_nested', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'AA724D1C-0E72-4996-88BB-0155ED48D967', N'14C6F5CF-0312-4D5B-9B02-FFC7063DCCC0', N'base_table_assignment', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'CA22144E-DED5-43B2-870D-01673443C2F1', N'E1FA4912-17C0-424F-AC04-E8631F5DCCB6', N'pengelola_blok6', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'4D2204D8-0F8C-43F9-BBA6-018CDB7C3086', N'14C6F5CF-0312-4D5B-9B02-FFC7063DCCC0', N'base_table_assignment_responsibility', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'76F8D2A5-7456-4B12-BD04-0198972D013E', N'65D8F96D-C035-4289-95E7-D026B0BFB970', N'l2_roster_blok6_1', N'3')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'886DBF5C-7F5E-49C2-85B6-019CD038475D', N'DF46FEC5-6A98-443D-8104-60E512E49293', N'pengelola_blok8', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'C197E338-B5A9-43D5-9B28-019EBFFB0B19', N'F091EBD8-261B-4032-95CF-7FA39D404640', N'base_table_assignment_region', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'1A1010C7-061F-42A0-B31F-01EFD9377E2D', N'28518B5E-AB54-4610-8C3C-BF2BC89185E3', N'pair_label_value_1', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'DC23CB3D-EC30-4BD2-96BE-02094A6FF09F', N'56F8E88F-57A9-480A-901D-845CF8B7EBE8', N'r601_nested', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'8C27697C-6F6A-4C46-84DE-02502D79D7F1', N'F34CD0D8-B10B-4E7F-B091-717AF6A4F12C', N'base_table_assignment_responsibility', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'A3205AAA-53EE-4782-8FBC-0253500B800A', N'9E449ADF-C3F1-4205-BAC0-58B5EA0578D2', N'base_table_assignment_region', N'0')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'535FEA6C-C23F-471E-B55D-02604EFB25BE', N'8A9F4F6A-5D1F-4F52-A5C2-E87904002E2F', N'r601_nested', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_table] ([id], [extraction_template_id], [name], [roster_level]) VALUES (N'423523D6-3C91-44DA-8C37-FFF93D171720', N'613CC0B6-6D5A-4F82-8AD3-B2EEF0AFEBAD', N'r1209_nested', N'1')
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for extraction_template
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[extraction_template]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[extraction_template]
+GO
+
+CREATE TABLE [data_extraction].[extraction_template] (
+  [id] uniqueidentifier  NOT NULL,
+  [template_id] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [template_version] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [validation_version] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [created_at] datetime2(7)  NULL,
+  [created_by] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [is_active] bit DEFAULT 1 NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[extraction_template] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of extraction_template
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'A90014E0-7A8A-495A-9989-00A249D29DC8', N'f2bd0eca-9a94-4ff9-86bd-1df86a9d6404', N'0.0.6', N'0.0.1', N'2024-02-28 11:17:31.7360000', N'f6fed52d-4e79-4b61-a4c4-e853debe8429', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'63AFB448-FCE0-4029-BC20-00F8B6F87898', N'd42dde15-fadf-4260-828b-c34412f4544e', N'0.6.26', N'0.0.5', N'2024-02-28 08:41:51.2560000', N'3fd98954-2717-47a1-882b-709f3348e555', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'B9447A22-3EC5-4FD2-88DA-05154E6C7EB6', N'c40f0177-e01d-40c7-a5cd-5594581ddc62', N'0.0.4', N'0.0.4', N'2023-09-08 10:53:35.5420000', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'35706A04-4BF9-411D-BC75-09AA46DA728C', N'ba041040-5b37-4344-a4c7-21b60e7e878b', N'1.1.3', N'1.1.3', N'2023-08-14 09:37:27.1310000', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'DB3A007E-F044-4F8D-8A7B-0B6B7B01E179', N'acb83cc1-2303-4a98-b371-f8efc8788cf0', N'0.1.8', N'0.1.8', N'2023-01-16 12:08:59.6040000', N'3fd98954-2717-47a1-882b-709f3348e555', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'7469B1DA-72D5-4BD4-85C3-0DA9AD5D3908', N'55eb1e92-2660-4add-aa47-0cc8bab14bcf', N'0.4.6', N'0.4.6', N'2023-09-20 11:41:41.8880000', N'0b02e4e1-035b-48fa-8084-ea75130a355e', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'E4014160-B63A-49C0-9113-0F7AEF778936', N'c40f0177-e01d-40c7-a5cd-5594581ddc62', N'0.0.6', N'0.0.6', N'2023-09-09 23:24:06.7240000', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'27103BBE-4FB6-47BA-BB6D-151C63A81835', N'55eb1e92-2660-4add-aa47-0cc8bab14bcf', N'0.4.4', N'0.4.4', N'2023-08-09 13:26:31.8080000', N'0b02e4e1-035b-48fa-8084-ea75130a355e', N'1')
+GO
+
+INSERT INTO [data_extraction].[extraction_template] ([id], [template_id], [template_version], [validation_version], [created_at], [created_by], [is_active]) VALUES (N'14C6F5CF-0312-4D5B-9B02-FFC7063DCCC0', N'c40f0177-e01d-40c7-a5cd-5594581ddc62', N'0.0.9', N'0.0.9', N'2024-01-30 11:42:03.8330000', N'3fd98954-2717-47a1-882b-709f3348e555', N'1')
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for survey_period_extraction_columns
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[survey_period_extraction_columns]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[survey_period_extraction_columns]
+GO
+
+CREATE TABLE [data_extraction].[survey_period_extraction_columns] (
+  [id] uniqueidentifier  NOT NULL,
+  [survey_period_extraction_template_id] uniqueidentifier  NOT NULL,
+  [extraction_column_id] uniqueidentifier  NOT NULL,
+  [survey_period_extraction_table_topic_id] uniqueidentifier  NOT NULL,
+  [created_at] datetime2(7)  NULL,
+  [is_active] bit DEFAULT 1 NULL,
+  [deactivated_at] datetime2(7)  NULL,
+  [deactivated_survey_period_extraction_template_id] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_columns] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of survey_period_extraction_columns
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'F3B93647-22BC-4662-BF22-000290E92E20', N'5C201B50-3455-471A-90E4-9379A2927B68', N'742AD291-CE9A-40D7-9796-2568ED15AF9D', N'9C148431-BB93-42BA-8416-6D7004131B04', N'2024-03-20 16:21:22.7848630', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'2B59FBAC-88BB-423F-85B3-0002C0C5F84D', N'254CD810-89A3-4283-AAD8-E1E551D5DB1F', N'56435F4D-4904-4D1E-B4F1-68B19CD4A93F', N'6CB7333C-3782-43CE-972E-85ABF8752003', N'2024-01-16 09:47:30.6671990', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'A09E48C7-C3B0-42E0-BDA5-0006B8C180F0', N'36764B74-FFD0-499D-A765-0C964DC0E689', N'8F68818B-4CD9-4AE9-967D-C057858355DD', N'E8354E5E-1E05-468E-B552-80287C853882', N'2023-10-18 10:42:12.9075750', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'04784DEA-CD2B-4864-B57E-00071CDB12D6', N'2F5A7D54-D006-4811-8ADD-F4E621228AF6', N'9F197302-E64F-43DA-A56A-6AA2BA141B6E', N'CD352222-7936-4890-AC53-65B02FEC04F6', N'2024-01-12 09:35:14.0366370', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'D7934715-206D-42D5-8635-000880F7D3C2', N'36764B74-FFD0-499D-A765-0C964DC0E689', N'956F12CC-BC20-4ED6-B56C-99A42BFC0DA7', N'44BAAA58-7AA2-443C-9A6A-0EC8170FA786', N'2023-10-18 10:42:12.9066480', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'81E23831-4CCE-4578-9C61-0009932568C4', N'E505E299-7601-4B07-B232-1A2C16325608', N'B5819601-5DA6-4006-84FB-EAF9CCA9AF72', N'F339CEC2-FCC5-46B7-966D-495B2C47B6AB', N'2023-08-22 11:46:25.4321410', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'081A0D35-BC89-4ED3-BD85-0013A35D6FEC', N'7361993B-9BF3-4DF4-98DE-273794AE9A95', N'61573382-6D1B-4FFD-8820-CC6455B0AF9C', N'824C1DF4-AFB9-471E-BE5C-B399A9CC338D', N'2024-03-20 00:05:01.1132130', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'BF3E2589-B4AB-4E66-802A-00159E6C01A4', N'11BF8B86-96E8-49D0-895C-BD95ABC89FBF', N'E92AE40E-E77E-4730-AB93-C8CBE8A892E5', N'E7D82A2A-EFBA-4785-8994-11EF2F2CE24F', N'2023-08-14 13:21:09.0919290', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'B454CD41-AFD1-41BC-9182-001CB9C86003', N'98509D83-1B57-41D2-8611-BBEF32133211', N'C5B8A81A-32FA-44A9-A8E7-B09FC6084CBC', N'7EA8EC8C-1FF0-4DD2-B29C-504BE1AA546B', N'2023-08-22 11:40:25.6126670', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'C9B3F436-2787-479F-8C3A-001EEAD7AE0E', N'E493087E-14BC-45B5-A2C9-4496D4DCFDDB', N'94903B3E-6E43-4336-B957-8D00775E3E7D', N'007BC5B9-7BA4-4BEA-9900-57DBA6FB75C9', N'2023-01-16 14:15:29.6677350', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'5A3E347D-4117-47F7-811D-001F229EE0F4', N'11BF8B86-96E8-49D0-895C-BD95ABC89FBF', N'034F4479-4CD2-400D-B43C-5D90234FE54D', N'A858A691-44FB-4702-B9F4-4D476FB1CE4D', N'2023-08-14 13:21:09.0892100', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'7B9849E2-C862-4F7D-8060-002180CF9C75', N'7361993B-9BF3-4DF4-98DE-273794AE9A95', N'42FCD659-AF34-4237-8AD8-2F0DA462B2EF', N'D58132B0-689A-47E9-BB0E-B99239739E20', N'2024-03-20 00:05:01.1097400', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'23AE9B7E-ABDD-4BD9-88AE-002196B39EFC', N'09F834B8-4CA3-4167-BBFD-69B3FF12E263', N'37F7EF5C-17BE-4B40-A8B9-967A4844E224', N'8CA50782-0E81-41D9-8A86-2EE092A1AE5D', N'2024-02-15 00:42:58.3929320', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'8FDE232A-E8C0-4681-8501-0026731396DD', N'09F834B8-4CA3-4167-BBFD-69B3FF12E263', N'A5BAB3C9-0CDD-4568-B680-1C3F01E81BAF', N'C3BCE03F-6B93-40A4-9BEE-464E545642AC', N'2024-02-15 00:42:58.3902830', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'B9DB5969-AD86-453B-9F1A-0027B732A0F6', N'09F834B8-4CA3-4167-BBFD-69B3FF12E263', N'8AB6D51A-2B19-4951-9553-F8CE269BC75C', N'7F33231E-20CD-4083-B1CE-4E8CFA2950D1', N'2024-02-15 00:42:58.3943040', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'F919A974-C7F1-418D-981A-0027B7A17644', N'43E039FF-7B6A-4584-B292-F189F4F5B800', N'A24FC894-85F9-4754-A7D0-BC77DC0F9CF5', N'7A6CC2E7-F253-466E-923A-A152C2B4C19A', N'2023-10-02 15:19:21.3784740', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'237C499F-425D-4EC9-A75F-002DD236CB14', N'CD9FF70A-92EA-493A-AC09-32136A02EA04', N'54CA553B-5DE2-4375-BA1A-F0D391B2B1A1', N'6D2014A2-4F53-4119-B702-218CA9803B5D', N'2023-08-22 11:43:23.4928180', N'1', NULL, NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_columns] ([id], [survey_period_extraction_template_id], [extraction_column_id], [survey_period_extraction_table_topic_id], [created_at], [is_active], [deactivated_at], [deactivated_survey_period_extraction_template_id]) VALUES (N'2567379D-D475-40A8-BB73-003627BB4C7E', N'36764B74-FFD0-499D-A765-0C964DC0E689', N'B0D5C0D7-6C15-434E-A567-B5CA95B1710E', N'AE31F08A-A8D0-4EDD-83B5-84C0113BE26A', N'2023-10-18 10:42:12.9072830', N'1', NULL, NULL)
+GO
+
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for survey_period_extraction_table_topics
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[survey_period_extraction_table_topics]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[survey_period_extraction_table_topics]
+GO
+
+CREATE TABLE [data_extraction].[survey_period_extraction_table_topics] (
+  [id] uniqueidentifier  NOT NULL,
+  [survey_period_id] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [template_id] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [extraction_table_id] uniqueidentifier  NOT NULL,
+  [extraction_output_table_id] int  NOT NULL,
+  [topic] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [created_by] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [created_at] datetime2(7)  NULL,
+  [is_active] bit DEFAULT 1 NULL,
+  [survey_id] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_table_topics] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of survey_period_extraction_table_topics
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'50CCD8F3-8B70-40B1-96C2-0037E09BC957', N'2dec76fc-cfda-49e5-ba30-4e731276b7b0', N'260c0f96-c3bb-4b67-bc1f-838ec1cf8018', N'2D92358E-8040-4499-A8BB-784C2A7D9449', N'1', N'txn_2dec76fc_260c0f96_list_b3', N'7e21a7b9-93db-42ad-8b3e-7607a3d838af', N'2024-01-12 09:35:13.8546070', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'5D5BC59E-6F22-44EC-9999-008483C0526B', N'627be7a8-6256-4c0b-a418-ddd3565277fb', N'c8c4fddc-0c62-4e94-9938-8528b770f85d', N'3C771ECB-94D7-4125-8C61-1A21A7D2AC38', N'1', N't_627be7a8_c8c4fddc_l2_roster_panen_3', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'2023-08-22 11:46:25.3618660', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'405FBADA-74DB-4E60-B87D-00DC0B165390', N'66ef801a-854f-4294-9bae-ee2ca0e39fa2', N'968cb9a6-84ff-4544-b4d1-147547e99f59', N'764156FD-620B-4630-A9AB-93DAA9DEEDB4', N'1', N'tga_66ef801a_968cb9a6_L2_nested', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-03-20 16:29:24.2612520', N'1', N'92f2d693-f9f7-4824-8f70-94a6caad557c')
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'8867CADC-F753-4262-A6D5-01157A6D1B3C', N'9c250d57-8212-4d8b-8de6-cc8855df7160', N'c8c4fddc-0c62-4e94-9938-8528b770f85d', N'8B4C40AD-C2BF-448B-ACE7-0E93B31C00EF', N'1', N't_9c250d57_c8c4fddc_pengelola_blok910', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'2023-08-22 11:40:25.5355530', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'2C1357D4-E563-4D71-87A9-0152D77571B0', N'c334a020-4f50-4404-aaa1-f98d5dfdc0d9', N'c8c4fddc-0c62-4e94-9938-8528b770f85d', N'A516E3BB-7E15-4BF5-9903-D4AE17B5DED8', N'1', N't_c334a020_c8c4fddc_l2_roster_blok72', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'2023-08-22 11:03:15.3951600', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'C38B4054-6FA4-4DFE-9184-01FA092B5AD9', N'c0d640ae-c97a-46b7-966f-ba3db4a94e07', N'968cb9a6-84ff-4544-b4d1-147547e99f59', N'9CB12EB4-B0E2-497A-BC73-2ADB60B3C955', N'1', N'tji_c0d640ae_base_table_assignment_region', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-01-16 09:47:30.6252180', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'BF6F43A2-2D73-4456-8590-03276B0172BC', N'c334a020-4f50-4404-aaa1-f98d5dfdc0d9', N'c8c4fddc-0c62-4e94-9938-8528b770f85d', N'353A7FFC-F289-4DA9-9C85-22727D66F009', N'1', N't_c334a020_c8c4fddc_l2_roster_panen_1', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'2023-08-22 11:03:15.3951720', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'607B4902-B541-4B6F-8435-037486292199', N'af6dbde8-f098-4b9d-b878-80636879eceb', N'c40f0177-e01d-40c7-a5cd-5594581ddc62', N'6930124C-826E-4122-8E15-0BA8758068F9', N'1', N'twd_af6dbde8_base_table_assignment_history', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-01-30 23:37:34.7345130', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_table_topics] ([id], [survey_period_id], [template_id], [extraction_table_id], [extraction_output_table_id], [topic], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'9FCFB832-3FAB-43D9-8D0F-FF10564E3206', N'5a9ad55e-51ba-4828-967b-4a0a69263938', N'55eb1e92-2660-4add-aa47-0cc8bab14bcf', N'96AAD6BE-D30A-4C59-8FDF-7EC543021730', N'1', N'5a9ad55e_55eb1e92_r1103a1_baru_nested', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-08-09 22:30:21.9008340', N'1', NULL)
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Table structure for survey_period_extraction_templates
+-- ----------------------------
+IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[data_extraction].[survey_period_extraction_templates]') AND type IN ('U'))
+	DROP TABLE [data_extraction].[survey_period_extraction_templates]
+GO
+
+CREATE TABLE [data_extraction].[survey_period_extraction_templates] (
+  [id] uniqueidentifier  NOT NULL,
+  [survey_period_id] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [template_id] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [template_version] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [validation_version] varchar(50) COLLATE SQL_Latin1_General_CP1_CI_AS  NOT NULL,
+  [extraction_template_id] uniqueidentifier  NOT NULL,
+  [count_added_table] int  NULL,
+  [count_deleted_table] int  NULL,
+  [count_added_column] int  NULL,
+  [count_deleted_column] int  NULL,
+  [count_changed_column] int  NULL,
+  [note] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [log] varchar(max) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [extraction_output_table_id] int  NOT NULL,
+  [created_by] varchar(36) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL,
+  [created_at] datetime2(7)  NULL,
+  [is_active] bit DEFAULT 1 NULL,
+  [survey_id] varchar(255) COLLATE SQL_Latin1_General_CP1_CI_AS  NULL
+)
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_templates] SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+-- ----------------------------
+-- Records of survey_period_extraction_templates
+-- ----------------------------
+BEGIN TRANSACTION
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'36764B74-FFD0-499D-A765-0C964DC0E689', N'cfc90c48-8bb4-4b48-bb1a-7c0f368f280b', N'e557ce5d-ff77-46d7-813f-4248b24b523c', N'0.3.3', N'0.3.3', N'3E8D7988-3C5D-40C9-9505-7A1101D09AE4', N'14', N'0', N'1230', N'0', N'0', NULL, NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-10-18 10:42:12.8854540', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'5888B0B6-83B7-416C-A690-0E9B9F0D820E', N'9612db22-6c1f-44e9-b3f8-e40807c09767', N'37e31e4c-6ec8-4783-b709-fba9ec17bbb0', N'0.0.3', N'0.0.3', N'CD76F800-A689-45E4-8025-38865374BA28', N'7', N'0', N'307', N'0', N'0', NULL, NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-01-29 23:55:09.6876440', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'9ED12C2D-BE16-481B-BC17-132F6FF282C3', N'cce824b3-7ccb-4b8c-96be-c7f782f759f5', N'45e1928a-a9d2-4740-a624-78fa3a5a86cb', N'0.0.15', N'0.0.15', N'9E09CB4E-D359-4BAE-8756-3F4AC6DB60B3', N'0', N'0', N'0', N'0', N'0', N'note test deploy', NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-07-27 16:02:32.2221930', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'9F37989D-E431-464B-B975-1746A5C2CA66', N'cce824b3-7ccb-4b8c-96be-c7f782f759f5', N'45e1928a-a9d2-4740-a624-78fa3a5a86cb', N'0.0.15', N'0.0.15', N'9E09CB4E-D359-4BAE-8756-3F4AC6DB60B3', N'0', N'0', N'0', N'0', N'0', N'note test deploy', NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-07-27 16:14:30.6217510', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'E505E299-7601-4B07-B232-1A2C16325608', N'627be7a8-6256-4c0b-a418-ddd3565277fb', N'c8c4fddc-0c62-4e94-9938-8528b770f85d', N'2.0.1', N'2.0.1', N'20F5D817-C0AF-4F08-84D1-45D6A850D3A1', N'28', N'0', N'1014', N'0', N'0', N'From Upload Template', NULL, N'1', N'd61f41ee-5079-4474-84e9-3c458d283f9c', N'2023-08-22 11:46:25.4241930', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'5FEF54A8-5954-4E50-AE88-1AC082EA57BA', N'cce824b3-7ccb-4b8c-96be-c7f782f759f5', N'45e1928a-a9d2-4740-a624-78fa3a5a86cb', N'0.0.15', N'0.0.15', N'9E09CB4E-D359-4BAE-8756-3F4AC6DB60B3', N'0', N'0', N'0', N'0', N'0', NULL, NULL, N'1', N'2b939e09-2ff5-49b1-97f0-15807c1fa906', N'2024-01-15 14:22:39.4907779', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'1A26B155-B20E-4B32-AE1C-1B50E51FD2C1', N'c0d640ae-c97a-46b7-966f-ba3db4a94e07', N'968cb9a6-84ff-4544-b4d1-147547e99f59', N'0.6.24', N'0.0.5', N'13624A5E-17E1-4CCF-B7CA-7781910A3206', N'0', N'0', N'0', N'0', N'0', NULL, NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-01-25 14:23:14.6241580', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'3A08D71D-2964-4142-9216-23FE7641E429', N'5a9ad55e-51ba-4828-967b-4a0a69263938', N'55eb1e92-2660-4add-aa47-0cc8bab14bcf', N'0.4.4', N'0.4.4', N'27103BBE-4FB6-47BA-BB6D-151C63A81835', N'0', N'0', N'0', N'0', N'0', N'From Upload Template', NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-08-11 09:52:54.0180860', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'7361993B-9BF3-4DF4-98DE-273794AE9A95', N'0af7149d-1eeb-44da-8206-32b0cccd56d6', N'2a0f541d-3216-4fb5-91dc-9d2ec1aee1b1', N'1.0.5', N'1.0.5', N'9368A72A-25B1-4639-93D9-C5316CA1F3D3', N'19', N'0', N'1483', N'0', N'0', NULL, NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2024-03-20 00:05:01.0882710', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'2F5A7D54-D006-4811-8ADD-F4E621228AF6', N'2dec76fc-cfda-49e5-ba30-4e731276b7b0', N'260c0f96-c3bb-4b67-bc1f-838ec1cf8018', N'0.0.9', N'0.0.3', N'28518B5E-AB54-4610-8C3C-BF2BC89185E3', N'29', N'0', N'1234', N'0', N'0', NULL, NULL, N'1', N'7e21a7b9-93db-42ad-8b3e-7607a3d838af', N'2024-01-12 09:35:14.0139550', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'DEEBD0BA-8FF1-4343-8D60-F6E21FD9B114', N'd5ef9fd1-77eb-49b5-a047-1afcb5db1401', N'2e58f9e3-4f45-4e3b-a187-17f823def228', N'0.1.2', N'0.1.2', N'8565A870-118D-4D6A-9EDD-19B2C1D5ED9F', N'11', N'0', N'1918', N'0', N'0', N'From Upload Template', NULL, N'1', N'9362ecb7-ad5a-40f8-88f7-294cceb8239b', N'2023-08-30 15:05:37.4944290', N'1', NULL)
+GO
+
+INSERT INTO [data_extraction].[survey_period_extraction_templates] ([id], [survey_period_id], [template_id], [template_version], [validation_version], [extraction_template_id], [count_added_table], [count_deleted_table], [count_added_column], [count_deleted_column], [count_changed_column], [note], [log], [extraction_output_table_id], [created_by], [created_at], [is_active], [survey_id]) VALUES (N'D880018B-B76B-4260-82D1-FF633C166B4B', N'876ae546-c306-40bc-8a96-6b6df542c043', N'acb83cc1-2303-4a98-b371-f8efc8788cf0', N'0.1.20', N'0.1.20', N'F92133BC-B50B-4DFB-8321-50D5B63D8F5D', N'0', N'0', N'0', N'0', N'0', NULL, NULL, N'1', N'3fd98954-2717-47a1-882b-709f3348e555', N'2023-01-16 14:21:36.3449780', N'1', NULL)
+GO
+
+COMMIT
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table extraction_column
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_column] ADD CONSTRAINT [PK__extracti__3213E83F3362F2AC] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table extraction_output_tables
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_output_tables] ADD CONSTRAINT [PK__extracti__3213E83F8D4FB052] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table extraction_table
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_table] ADD CONSTRAINT [PK__extracti__3213E83F2A051D5E] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table extraction_template
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_template] ADD CONSTRAINT [PK__extracti__3213E83FB2D4C5C3] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table survey_period_extraction_columns
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_columns] ADD CONSTRAINT [PK__survey_p__3213E83F18F6FACA] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table survey_period_extraction_table_topics
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_table_topics] ADD CONSTRAINT [PK__survey_p__3213E83F23377154] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Primary Key structure for table survey_period_extraction_templates
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_templates] ADD CONSTRAINT [PK__survey_p__3213E83F2A7BAC04] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
+ON [PRIMARY]
+GO
+
+
+-- ----------------------------
+-- Foreign Keys structure for table extraction_column
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_column] ADD CONSTRAINT [FK__extractio__extra__2F650636] FOREIGN KEY ([extraction_table_id]) REFERENCES [data_extraction].[extraction_table] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+
+-- ----------------------------
+-- Foreign Keys structure for table extraction_table
+-- ----------------------------
+ALTER TABLE [data_extraction].[extraction_table] ADD CONSTRAINT [FK__extractio__extra__2B947552] FOREIGN KEY ([extraction_template_id]) REFERENCES [data_extraction].[extraction_template] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+
+-- ----------------------------
+-- Foreign Keys structure for table survey_period_extraction_columns
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_columns] ADD CONSTRAINT [FK__survey_pe__surve__66B53B20] FOREIGN KEY ([survey_period_extraction_template_id]) REFERENCES [data_extraction].[survey_period_extraction_templates] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_columns] ADD CONSTRAINT [FK__survey_pe__extra__67A95F59] FOREIGN KEY ([extraction_column_id]) REFERENCES [data_extraction].[extraction_column] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_columns] ADD CONSTRAINT [FK__survey_pe__surve__689D8392] FOREIGN KEY ([survey_period_extraction_table_topic_id]) REFERENCES [data_extraction].[survey_period_extraction_table_topics] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+
+-- ----------------------------
+-- Foreign Keys structure for table survey_period_extraction_table_topics
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_table_topics] ADD CONSTRAINT [FK__survey_pe__surve__558AAF1E] FOREIGN KEY ([survey_period_id]) REFERENCES [survey].[survey_periods] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_table_topics] ADD CONSTRAINT [FK__survey_pe__extra__567ED357] FOREIGN KEY ([extraction_table_id]) REFERENCES [data_extraction].[extraction_table] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_table_topics] ADD CONSTRAINT [FK__survey_pe__extra__5772F790] FOREIGN KEY ([extraction_output_table_id]) REFERENCES [data_extraction].[extraction_output_tables] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+
+-- ----------------------------
+-- Foreign Keys structure for table survey_period_extraction_templates
+-- ----------------------------
+ALTER TABLE [data_extraction].[survey_period_extraction_templates] ADD CONSTRAINT [FK__survey_pe__surve__5B438874] FOREIGN KEY ([survey_period_id]) REFERENCES [survey].[survey_periods] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_templates] ADD CONSTRAINT [FK__survey_pe__extra__5C37ACAD] FOREIGN KEY ([extraction_template_id]) REFERENCES [data_extraction].[extraction_template] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+
+ALTER TABLE [data_extraction].[survey_period_extraction_templates] ADD CONSTRAINT [FK__survey_pe__extra__5D2BD0E6] FOREIGN KEY ([extraction_output_table_id]) REFERENCES [data_extraction].[extraction_output_tables] ([id]) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
+

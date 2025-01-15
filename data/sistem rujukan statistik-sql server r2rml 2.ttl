@@ -1,0 +1,221 @@
+@prefix : <https://w3id.org/sdp/core#> .
+@prefix cc: <https://creativecommons.org/ns/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cspa: <http://rdf.unece.org/models/cspa#> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsim: <http://rdf.unece.org/models/gsim#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix gamso: <http://rdf.unece.org/models/gamso#> .
+@prefix gsbpm: <http://rdf.unece.org/models/gsbpm#> .
+@prefix icspa: <http://id.unece.org/models/cspa/services/> .
+@prefix id-ps: <https://www.bps.go.id/survey/population-census#> .
+@prefix igamso: <http://id.unece.org/models/gamso/> .
+@prefix igsbpm: <http://id.unece.org/models/gsbpm/> .
+@prefix kshrts: <https://www.ksh.hu/survey/retail-trade-statistics#> .
+@prefix gsim-sum: <https://w3id.org/italia/onto/gsim-sum#> .
+@prefix sirusa: <https://bps.go.id/metadata/sirusa/> .
+@base <https://w3id.org/sdp/core#> .
+
+<#TriplesMap_statistical_program>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+    
+  rr:subjectMap [
+      rr:template "sirusa:{judul_kegiatan}" ;
+      rr:class :StatisticalProgram
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate gsim-sum:hasName-IA ;
+    rr:objectMap [
+      rr:column "judul_kegiatan" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :hasSP-SPC ;
+    rr:objectMap [
+      rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}" ;
+      rr:class :StatisticalProgramCycle
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :classifiedAsSP-SC ;
+    rr:objectMap [
+      rr:template "sirusa:statistical+classification={jenis_statistik}" ;
+      rr:class gsim-sum:StatisticalClassification
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :useExchangeInstrumentSP-EI ;
+    rr:objectMap [
+      rr:template "sirusa:exchange+instrument={cara_pengumpulan_data}" ;
+      rr:class gsim:ExchangeInstrumen
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :ownedBySP-Ow ;
+    rr:objectMap [
+      rr:template "sirusa:owner={pj_jabatan}" ;
+    rr:class gsim:Owner
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :hasObjective-SP ;
+    rr:objectMap [
+      rr:column "tujuan_kegiatan" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate gsim-sum:hasStatus-SP ;
+    rr:objectMap [
+      rr:column "status" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate :heldBySP-O ;
+    rr:objectMap [
+      rr:template "sirusa:organizations={produsen_data_name}" ;
+      rr:class gsim:Organisations
+    ]
+  ] .
+
+<#TriplesMap_statistical_program_cicle>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}" ;
+    rr:class :StatisticalProgramCycle
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate gsim-sum:hasName-IA ;
+    rr:objectMap [
+      rr:template "{judul_kegiatan} periode {tahun_kegiatan}" ;
+      rr:termType rr:Literal
+    ]
+  ] ;
+    
+  rr:predicateObjectMap [
+    rr:predicate :includesSPC-BP ;
+    rr:objectMap [
+      rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}/business+process" ;
+      rr:class :BusinessProcess
+    ]
+  ] .
+    
+
+<#TriplesMap_business_procress>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}/business+process" ;
+    rr:class :BusinessProcess
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate :hasBP-PS ;
+    rr:objectMap [
+      rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}/design+variable+description" ;
+      rr:class :ProcessStep
+    ]
+  ] .
+
+<#TriplesMap_process_step>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:{judul_kegiatan}/{tahun_kegiatan}/design+variable+description" ;
+    rr:class :ProcessStep
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate :classifiedAs-PS ;
+    rr:objectMap [
+      rr:template "http://id.unece.org/models/gsbpm/2.2" ;
+      rr:class gsbpm:SubProcess
+    ]
+  ] .
+
+<#TriplesMap_statistical_classification>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:statistical+classification={jenis_statistik}" ;
+    rr:class gsim-sum:StatisticalClassification
+  ] .
+
+<#TriplesMap_exchange_instrument>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:exchange+instrument={cara_pengumpulan_data}" ;
+    rr:class gsim:ExchangeInstrumen
+  ] .
+
+<#TriplesMap_owner>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:owner={pj_jabatan}" ;
+    rr:class gsim:Owner
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate gsim-sum:hasName-IA ;
+    rr:objectMap [
+      rr:column "pj_jabatan" ;
+      rr:datatype xsd:string
+    ]
+  ] .
+
+<#TriplesMap_organizations>
+  rr:logicalTable [ rr:tableName "master_kegiatan" ] ;
+
+  rr:subjectMap [
+    rr:template "sirusa:organizations={produsen_data_name}" ;
+    rr:class gsim:Organisations
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate gsim-sum:hasName-IA ;
+    rr:objectMap [
+      rr:column "produsen_data_name" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate :hasProvinceCode ;
+    rr:objectMap [
+      rr:column "produsen_data_province_code" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate :hasCityCode ;
+    rr:objectMap [
+      rr:column "produsen_data_city_code" ;
+      rr:datatype xsd:string
+    ]
+  ] .
