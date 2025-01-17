@@ -21,7 +21,7 @@ SAMPLE_PROMPTS = [
     1. Dari tabel master_kegiatan + kolom tujuan_kegiatan, maka properties yang digunakan adalah hasObjective-SP
     2. Dari tabel master_kegiatan + kolom tujuan_kegiatan, maka properties yang digunakan adalah hasStatus-SP
     """,
-    "(Prompt#4) Berdasarkan konteks dan contoh yang sudah dipelajari sebelumnya, tebak Class, Data Properties dan Object properties dari semua tabel dan kolom berikut:",
+    "(Prompt#4) Berdasarkan konteks dan contoh yang sudah dipelajari sebelumnya, tebak Class, Data Properties dan Object properties untuk setiap kolom dari semua tabel di database MS SQL terlampir:",
     """(Prompt#5) Buatkan ontologi lokal lengkap dalam format Turtle (.ttl) dari skema seluruh tabel yang saya miliki di atas, berdasarkan ontologi global dan contoh ontologi lokal sirusa yang sudah dipelajari.
         Pastikan hasilnya adalah RDF/Turtle yang valid dengan:
         1. Prefix dan namespace yang benar
